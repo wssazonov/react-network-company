@@ -1,0 +1,69 @@
+.primary-button {
+  border: none;
+  height: 32px;
+  border-radius: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #F4C52E;
+  font-family: "Ubuntu Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}
+
+.secondary-button {
+  background: #FFFFFF;
+  border: 0.5px solid #1AA5B8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Ubuntu Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #1AA5B8;
+}
+
+.borderless {
+  border: 0;
+  outline: none;
+}
+
+.warn-button {
+  background: #FFFFFF;
+  border: 0.5px solid #FF5550;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Ubuntu Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #FF5550;
+}
+
+.small-button {
+  height: 24px !important;
+}
+
+.app-button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  button:first-child {
+    margin-right: 16px;
+  }
+}

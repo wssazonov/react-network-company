@@ -1,0 +1,60 @@
+.replenish-modal-content {
+  margin: 32px;
+  .secondary-button {
+    margin-top: 10px;
+    margin-bottom: 26px;
+  }
+}
+
+.two-column-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 900px;
+  width: 100%;
+  h1 {
+    margin-top: 16px !important;
+    margin-bottom: 12px !important;
+  }
+}
+.replenish-modal {
+  .modal-content, .modal-dialog {
+    min-width: 964px;
+    max-width: 1400px;
+  }
+}
+
+.modal-cross {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.two-column-text {
+  display: flex;
+  margin-top: 16px;
+  width: 60%;
+  min-width: 450px;
+  margin-right: 32px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  > div {
+    width: 50%;
+    .regular-text:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    .regular-text {
+      div {
+        font-weight: bold !important;
+      }
+      label {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

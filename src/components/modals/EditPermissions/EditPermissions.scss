@@ -1,0 +1,25 @@
+.add-modal {
+  .modal-content, .modal-dialog {
+    width: 443px !important;
+  }
+}
+
+.permission-input {
+  display: flex;
+}
+
+.user-edit-input {
+  width: 250px !important;
+  margin-right: 16px;
+  input {
+    font-family: Ubuntu Mono !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 16px !important;
+    color: #000000 !important;
+  }
+}
+
+.sum-input {
+  width: 100px !important;
+}

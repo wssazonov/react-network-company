@@ -1,0 +1,64 @@
+.modal {
+  padding-top: 32px !important;
+}
+
+.modal-content {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.payment-modal {
+  .blue-text {
+    font-family: Ubuntu Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #1AA5B8;
+    text-decoration: underline;
+  }
+  .modal-content, .modal-dialog {
+    background: #fff !important;
+    min-width: 392px !important;
+    width: 20% !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+  .modal-dialog {
+    float: right;
+  }
+  .modalBody {
+    padding: 40px 20px;
+    h1 {
+      margin-bottom: 8px !important;
+    }
+    .modalDetail {
+      margin-top: 23px;
+      font-family: Ubuntu Mono;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 16px;
+      color: #000000;
+      display: grid;
+      margin-bottom: 20px;
+      span {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      p {
+        font-weight: normal;
+        margin: 0;
+      }
+      .getInfo{
+        padding-bottom: 20px;
+      }
+      .secondary-button {
+        border: none;
+        border-bottom: 0.5px solid #1AA5B8;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 0;
+      }
+    }
+  }
+}

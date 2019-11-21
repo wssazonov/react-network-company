@@ -1,0 +1,40 @@
+h1 {
+  margin-bottom: 22px !important;
+}
+
+.app-input-group {
+  margin-top: 24px;
+}
+
+.input-button-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  *:first-child {
+    margin-right: 16px;
+  }
+  input {
+    width: 353px !important;
+  }
+  button {
+    margin-top: 0 !important;
+    min-width: 202px;
+    height: 32px !important;
+  }
+}
+.input-with-button {
+  &:not(:first-child) {
+    margin-top: 18px !important;
+  }
+
+  .regular-text {
+    width: 64%;
+  }
+}
+
+.contract {
+  padding-top: 16px;
+  padding-bottom: 32px;
+}

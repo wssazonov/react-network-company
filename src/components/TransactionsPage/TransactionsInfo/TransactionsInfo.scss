@@ -1,0 +1,33 @@
+.transactions-info-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 8px 2px 0px;
+    margin-right: 8px;
+    height: 40px;
+
+    h2 {
+      margin: 0;
+    }
+
+    .regular-text {
+      margin: 0;
+    }
+  }
+
+  .green {
+    p, h2 {
+      color: #8AB65A;
+    }
+  }
+
+  .red {
+    p, h2 {
+      color: #FF5550;
+    }
+  }
+}

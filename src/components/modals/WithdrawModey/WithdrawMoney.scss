@@ -1,0 +1,72 @@
+// h1 {
+//   margin: 0 !important;
+// }
+
+.withdraw-modal-content {
+  margin-left: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  .secondary-button {
+    margin-top: 10px;
+    margin-bottom: 26px;
+  }
+}
+
+.withdraw-modal {
+  .modal-content, .modal-dialog {
+    min-width: 600px;
+    max-width: 900px;
+  }
+}
+
+.modal-cross {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.input-button {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  > div {
+    margin-right: 8px;
+  }
+  span {
+    color: #1AA5B8 !important;
+  }
+  .regular-text {
+    line-height: 20px !important;
+  }
+}
+
+.two-column-text {
+  display: flex;
+  margin-top: 16px;
+  width: 60%;
+  min-width: 450px;
+  margin-right: 32px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  > div {
+    width: 50%;
+    .regular-text:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    .regular-text {
+      div {
+        font-weight: bold !important;
+      }
+      label {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

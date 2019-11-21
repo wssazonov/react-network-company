@@ -1,0 +1,181 @@
+.app-input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+
+  .app-input:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
+.app-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  label {
+    font-family: "Ubuntu Mono", monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.4;
+    margin-bottom: 4px;
+  }
+
+  input {
+    width: 100%;
+    border: 0;
+    height: 32px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-family: "Ubuntu Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px !important;
+    color: #000000;
+    &:focus {
+      outline: none;
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.app-input > input:disabled {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+// im not sure we need this, but i think it's ok
+.input-with-button {
+  width: 50% !important;
+  min-width: 570px !important;
+  max-width: 700px !important;
+  .regular-text {
+    margin-top: 8px;
+  }
+}
+
+.wide-input {
+  width: 353px !important;
+}
+
+.medium-input {
+  width: 256px !important;
+}
+
+.small-input {
+  width: 160px !important;
+}
+
+.tiny-input {
+  width: 100px !important;
+}
+
+.app-dropdown-search {
+  width: 100% !important;
+  border: 0 !important;
+  height: 32px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px !important;
+  font-family: "Ubuntu Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  // color: #000000 !important;
+  min-height: 32px !important;
+  min-width: 353px !important;
+
+  .menu {
+    border: none !important;
+  }
+
+  .text {
+    top: -7px !important;
+    left: 0px !important;
+    font-family: "Ubuntu Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    // color: #000000 !important;
+  }
+
+  .search {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  .dropdown.icon::before {
+    content: '' !important;
+  }
+}
+
+.app-dropdown-button {
+  height: 32px !important;
+  min-height: 32px !important;
+  border: 1px solid #1AA5B8 !important;
+  border-radius: 4px  !important;;
+  display: flex !important;
+  flex-direction: row !important;;
+  justify-content: space-between !important;;
+  align-items: center !important;;
+  padding: 5px 5px 5px 8px !important;
+
+  font-family: "Ubuntu Mono", monospace !important;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px !important;;
+  line-height: 16px !important;;
+  color: #1AA5B8 !important;
+  .dropdown.icon {
+    position: unset !important;
+    padding: 0 14px 0 0 !important;
+    min-height: 32px !important;
+    &::before {
+      display: block;
+      line-height: 21px;
+      font-size: 22px !important;
+      content: "\2304" !important;
+    }
+  }
+
+  .menu.transition.visible {
+    width: 100% !important;
+  }
+
+  .item {
+    //height: 32px !important;
+    opacity: 0.4;
+    &:hover {
+      background: rgba(26, 165, 184, 0.1);
+      mix-blend-mode: darken;
+    }
+    &:active {
+      background: rgba(26, 165, 184, 0.4);
+    }
+  }
+}
+
+.ui.selection.dropdown.search .menu>.item {
+  padding: 0px 8px !important; 
+}
+
+.ui.disabled.fluid.search.selection.dropdown.medium-input.app-dropdown-search  {
+  opacity: 1 !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+}
