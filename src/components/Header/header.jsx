@@ -53,20 +53,18 @@ function Header({ userRole, setUserRole, contractStatus }) {
       <nav>
         <ul>
           <li className="logo"><img src={logo} alt="logo"/> <span className="logoText">обмен- <br/>ник</span></li>
-          <RoleBasedRender requiredRoles={ ['Администратор', 'Менеджер', 'Наблюдатель'] } >
+          {/* <RoleBasedRender requiredRoles={ ['Администратор', 'Менеджер', 'Наблюдатель'] } > */}
             <li>
-              <NavLink className="link" activeClassName="active-link" to="/contract">Контракт
-                {!contractStatus && (<span className="headerText">(Приостановлен)</span>)}
-              </NavLink></li>
-            <li><NavLink className="link" activeClassName="active-link" to="/users">Пользователи</NavLink></li>
-            <li><NavLink className="link" activeClassName="active-link" to="/addresses">Адреса</NavLink></li>
-            <li><NavLink className="link" activeClassName="active-link" to="/journal">Журнал</NavLink></li>
-          </RoleBasedRender>
-          <li><NavLink className="link" activeClassName="active-link" to="/transactions">Транзакции</NavLink></li>
-          <RoleBasedRender requiredRoles={ ['Клиент'] } >
-            <li><NavLink className="link" activeClassName="active-link" to="/permissions">Разрешения</NavLink></li>
-          </RoleBasedRender>
-          <li><NavLink className="link" activeClassName="active-link" to="/profile">Мой профиль</NavLink></li>
+              <NavLink className="link" activeClassName="active-link" to="/objects">Объекты</NavLink></li>
+            <li><NavLink className="link" activeClassName="active-link" to="/users">Потребители</NavLink></li>
+            <li><NavLink className="link" activeClassName="active-link" to="/addresses">Статистика</NavLink></li>
+            <li><NavLink className="link" activeClassName="active-link" to="/journal">Готовность</NavLink></li>
+          {/* </RoleBasedRender> */}
+          <li><NavLink className="link" activeClassName="active-link" to="/transactions">DR-события</NavLink></li>
+          {/* <RoleBasedRender requiredRoles={ ['Клиент'] } > */}
+            <li><NavLink className="link" activeClassName="active-link" to="/permissions">Документы</NavLink></li>
+          {/* </RoleBasedRender> */}
+          <li><NavLink className="link" activeClassName="active-link" to="/profile">Настройки</NavLink></li>
           <li><NavLink className="link" activeClassName="active-link" to="/login">Логин</NavLink></li>
         </ul>
     
@@ -79,9 +77,6 @@ function Header({ userRole, setUserRole, contractStatus }) {
             </div>
           </RoleBasedRender>
           <ul>
-            <RoleBasedRender requiredRoles={ ['Администратор', 'Менеджер', 'Наблюдатель'] } >
-              <li><span className="headerText">{userRole}</span></li>
-            </RoleBasedRender>
             <li className="logo">
               <NavLink className="link linkBorder" to=''>mail@mail.mail <span className="caret"></span></NavLink>
               <div>

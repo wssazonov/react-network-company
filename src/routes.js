@@ -7,8 +7,12 @@ import MyProfilePage from "./components/MyProfilePage/MyProfilePage";
 import UserProfilePage from "./components/UserProfilePage/UserProfilePage";
 import PermissionsPage from "./components/PermissionsPage/PermissionsPage";
 
+import ObjectsPage from "./components/ObjectsPage/ObjectsPage";
+import ObjectDetailPage from "./components/ObjectsPage/ObjectDetailPage/ObjectDetailPage";
+
 const routes = [
-  { path: '/contract', exact: true, component: ContractPage },
+  { path: '/objects', exact: true, component: ObjectsPage },
+  { path: '/objects/:objectId', exact: false, component: ObjectDetailPage },
   { path: '/users', exact: true, component: UsersPage },
   { path: '/users/:userId', exact: false, component: UserProfilePage },
   { path: '/addresses', exact: true, component: AddressesPage },

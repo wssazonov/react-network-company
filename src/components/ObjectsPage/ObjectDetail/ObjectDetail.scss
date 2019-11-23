@@ -1,0 +1,51 @@
+h1, h2 {
+  margin-bottom: 16px;
+}
+
+.profile-page {
+  .app-input {
+    .secondary-button {
+      margin-top: 8px;
+    }
+
+    .account {
+      width: 177px;
+    }
+
+    .bik-and-kpp {
+      width: 89px;
+    }
+
+    .inn {
+      width: 97px;
+    }
+  }
+  .time-input {
+    width: 190px !important;
+  }
+}
+
+.input-with-help-text {
+  .role-select {
+    width: 150px !important;
+  }
+  .with-margin {
+    margin-top: 20px;
+  }
+  width: 100%;
+  .wide-input {
+    margin-top: 12px;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  .help-text {
+    margin-left: 16px;
+  }
+  .blue-text {
+    color: #1AA5B8;
+  }
+}
+
+
