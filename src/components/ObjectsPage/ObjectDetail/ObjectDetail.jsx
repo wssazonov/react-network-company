@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ObjectDetail.scss'
+import './ObjectDetail.scss';
 import {Dropdown} from "semantic-ui-react";
 
 import { connect } from 'react-redux';

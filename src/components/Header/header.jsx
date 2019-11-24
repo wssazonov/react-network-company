@@ -64,18 +64,11 @@ function Header({ userRole, setUserRole, contractStatus }) {
           {/* <RoleBasedRender requiredRoles={ ['Клиент'] } > */}
             <li><NavLink className="link" activeClassName="active-link" to="/permissions">Документы</NavLink></li>
           {/* </RoleBasedRender> */}
-          <li><NavLink className="link" activeClassName="active-link" to="/profile">Настройки</NavLink></li>
+          <li><NavLink className="link" activeClassName="active-link" to="/settings">Настройки</NavLink></li>
           <li><NavLink className="link" activeClassName="active-link" to="/login">Логин</NavLink></li>
         </ul>
     
         <div className="balans">
-          <RoleBasedRender requiredRoles={ ['Клиент'] } >
-            <div>
-              <span>Баланс 532 ₽ </span>
-              <button className="primary-button" type="button" onClick={() => childReplenishRef.current.showModal()}>Пополнить</button>
-              <button className='secondary-button' onClick={() => childWithdrawRef.current.showModal()}>Снять</button>
-            </div>
-          </RoleBasedRender>
           <ul>
             <li className="logo">
               <NavLink className="link linkBorder" to=''>mail@mail.mail <span className="caret"></span></NavLink>
