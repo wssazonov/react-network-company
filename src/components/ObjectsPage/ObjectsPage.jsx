@@ -1,5 +1,6 @@
 import React from 'react';
 import ObjectsTable from './ObjectsTable/ObjectsTable';
+import './ObjectPage.scss'
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockObjects = [
@@ -20,7 +21,10 @@ function ObjectsPage({ history, match }) {
 
   return (
     <div className="page-content">
-      <h1>Объекты</h1>
+      <div className="header-block">
+        <h1>Объекты</h1>
+        <button className='secondary-button hidden'>добавить</button>
+      </div>
       {/* <RoleBasedRender requiredRoles={ ['Администратор', 'Менеджер'] } > */}
         {/* <button className="primary-button" type="button">Добавить пользователя</button> */}
       {/* </RoleBasedRender> */}

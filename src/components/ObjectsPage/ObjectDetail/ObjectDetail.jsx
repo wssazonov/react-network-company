@@ -62,7 +62,11 @@ function ObjectDetail({ object, onSubmit}) {
   };
   return (
     <div className='page-content profile-page'>
-      <h1>Объекты</h1>
+      <div className="header-object">
+        <h1>Объекты</h1>
+        <span> → Объект 1</span>
+      </div>
+      
       <div className='app-input-group'>
         <div className='app-input wide-input'>
           <label>Наименование</label>
