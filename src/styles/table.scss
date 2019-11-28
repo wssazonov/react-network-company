@@ -36,7 +36,7 @@
   }
 
   button {
-    position: absolute;
+    // position: absolute;
     height: 20px;
     top: 2px;
     left: 0px;
@@ -49,8 +49,6 @@
   .table-actions {
     min-width: 75px;
   }
-
-
 
   tbody tr:hover {
     cursor: pointer;

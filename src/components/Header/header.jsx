@@ -62,7 +62,9 @@ function Header({ userRole, setUserRole, contractStatus }) {
           {/* </RoleBasedRender> */}
           <li><NavLink className="link" activeClassName="active-link" to="/transactions">DR-события</NavLink></li>
           {/* <RoleBasedRender requiredRoles={ ['Клиент'] } > */}
-            <li><NavLink className="link" activeClassName="active-link" to="/permissions">Документы</NavLink></li>
+            {/* <li><NavLink className="link" activeClassName="active-link" to="/permissions">Документы</NavLink></li> */}
+
+            <li><NavLink className="link" activeClassName="active-link" to="/documents">Документы</NavLink></li>
           {/* </RoleBasedRender> */}
           <li><NavLink className="link" activeClassName="active-link" to="/settings">Настройки</NavLink></li>
           <li><NavLink className="link" activeClassName="active-link" to="/login">Логин</NavLink></li>
