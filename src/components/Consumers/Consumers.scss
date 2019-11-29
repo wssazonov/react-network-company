@@ -1,0 +1,60 @@
+.table {
+  table-layout: fixed;
+  .sub-header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.04) 100%), #FFFFFF;
+  }
+  .units {
+    font-weight: normal;
+    display: block;
+  }
+  .activate-button {
+    color: #1AA5B8;
+    z-index: 1;
+    position: absolute;
+    display: none;
+    width: 100%;
+    background: #FFFFFF;
+    border: 0.5px solid #1AA5B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 20px;
+    top: 2px;
+    left: 0;
+    text-align: center;
+  }
+  .button-status {
+    min-width: 115px;
+    box-sizing: content-box;
+    &.active:not(.activate-button) {
+      color: #8AB65A;
+    }
+    &.not-active:not(.activate-button) {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  td:hover {
+    .activate-button {
+      display: block;
+    }
+  }
+  .zero-value {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .custom-checkbox {
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    svg {
+      path {
+        fill: rgba(0, 0, 0, 0.4);
+      }
+    }
+    &.Mui-checked {
+      svg {
+        path {
+          fill: #1AA5B8;
+        }
+      }
+    }
+  }
+}
