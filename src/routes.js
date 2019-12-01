@@ -13,6 +13,7 @@ import SettingsPage from "./components/SettingsPage/SettingsPage";
 import Consumers from "./components/Consumers/Consumers";
 import ConsumerInfoPage from "./components/ConsumerInfo/ConsumerInfoPage";
 import DocumentsPage from "./components/DocumentsPage/DocumentsPage";
+import EventsPage from "./components/EventsPage/EventsPage";
 
 const routes = [
   { path: '/objects', exact: true, component: ObjectsPage },
@@ -21,6 +22,7 @@ const routes = [
   { path: '/documents', exact: true, component: DocumentsPage },
   { path: '/consumers', exact: true, component: Consumers },
   { path: '/consumers/:consumerId', exact: false, component: ConsumerInfoPage },
+  { path: '/dr-events', exact: true, component: EventsPage },
   
 
 
