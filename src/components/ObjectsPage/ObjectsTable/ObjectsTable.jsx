@@ -1,6 +1,5 @@
 import React from 'react';
 import Table from '../../Table/Table';
-import { formatDate } from '../../../utils';
 
 function ObjectsTable({ objects, onRowClick, onDelete }) {
   const columns = [
