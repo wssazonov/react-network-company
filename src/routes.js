@@ -11,12 +11,14 @@ import ObjectsPage from "./components/ObjectsPage/ObjectsPage";
 import ObjectDetailPage from "./components/ObjectsPage/ObjectDetailPage/ObjectDetailPage";
 import SettingsPage from "./components/SettingsPage/SettingsPage";
 import Consumers from "./components/Consumers/Consumers";
+import ConsumerInfoPage from "./components/ConsumerInfo/ConsumerInfoPage";
 
 const routes = [
   { path: '/objects', exact: true, component: ObjectsPage },
   { path: '/objects/:objectId', exact: false, component: ObjectDetailPage },
   { path: '/settings', exact: true, component: SettingsPage },
   { path: '/consumers', exact: true, component: Consumers },
+  { path: '/consumers/:consumerId', exact: false, component: ConsumerInfoPage },
   
 
 
