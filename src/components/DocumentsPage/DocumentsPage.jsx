@@ -1,7 +1,6 @@
 import React, {useRef} from 'react';
-import DocumentsNavPage from './DocumentsNavPage/DocumentsNavPage';
 import DocumentsInfo from './DocumentsInfo/DocumentsInfo';
-
+import './DocumentsPage.scss';
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 import DocumentsReady from './DocumentsReady/DocumentsReady';
 import DocumentsConsumption from './DocumentsConsumption/DocumentsConsumption';
@@ -33,7 +32,6 @@ function DocumentsPage() {
   return (
     <div className="page-content addresses-page">
       <h1>Документы</h1>
-      {/* <DocumentsNavPage /> */}
       <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
       
       

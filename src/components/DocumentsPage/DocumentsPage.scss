@@ -1,0 +1,23 @@
+.addresses-page {
+  .item {
+    font-family: Ubuntu Mono;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex !important;
+    align-items: center;
+    color: #000000 !important;
+    padding: 12px 0 !important;
+    margin-right: 24px !important;
+  }
+  .ui.secondary.pointing.menu .active.item {
+    border-bottom: 2px solid #1AA5B8 !important;
+  }
+  .ui.segment {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+}
