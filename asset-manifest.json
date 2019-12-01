@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-dr/static/css/main.58083d8e.chunk.css",
+    "main.js": "/react-dr/static/js/main.c9a8cf11.chunk.js",
+    "main.js.map": "/react-dr/static/js/main.c9a8cf11.chunk.js.map",
+    "runtime-main.js": "/react-dr/static/js/runtime-main.4ad3e8a3.js",
+    "runtime-main.js.map": "/react-dr/static/js/runtime-main.4ad3e8a3.js.map",
+    "static/css/2.46cdc163.chunk.css": "/react-dr/static/css/2.46cdc163.chunk.css",
+    "static/js/2.f74d6464.chunk.js": "/react-dr/static/js/2.f74d6464.chunk.js",
+    "static/js/2.f74d6464.chunk.js.map": "/react-dr/static/js/2.f74d6464.chunk.js.map",
+    "index.html": "/react-dr/index.html",
+    "precache-manifest.66c9a264aa60bed162463033e73586ff.js": "/react-dr/precache-manifest.66c9a264aa60bed162463033e73586ff.js",
+    "service-worker.js": "/react-dr/service-worker.js",
+    "static/css/2.46cdc163.chunk.css.map": "/react-dr/static/css/2.46cdc163.chunk.css.map",
+    "static/css/main.58083d8e.chunk.css.map": "/react-dr/static/css/main.58083d8e.chunk.css.map",
+    "static/media/headerLogo.svg": "/react-dr/static/media/headerLogo.1ae9b68b.svg",
+    "static/media/logo.svg": "/react-dr/static/media/logo.8ac90c27.svg",
+    "static/media/unfold-icon.svg": "/react-dr/static/media/unfold-icon.aa3be005.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ad3e8a3.js",
+    "static/css/2.46cdc163.chunk.css",
+    "static/js/2.f74d6464.chunk.js",
+    "static/css/main.58083d8e.chunk.css",
+    "static/js/main.c9a8cf11.chunk.js"
+  ]
+}
