@@ -14,6 +14,8 @@ import Consumers from "./components/Consumers/Consumers";
 import ConsumerInfoPage from "./components/ConsumerInfo/ConsumerInfoPage";
 import DocumentsPage from "./components/DocumentsPage/DocumentsPage";
 import EventsPage from "./components/EventsPage/EventsPage";
+import EventsPageNow from "./components/EventsPage/EventsPageNow";
+import EventsPageDate from "./components/EventsPage/EventsPageDate";
 
 const routes = [
   { path: '/objects', exact: true, component: ObjectsPage },
@@ -23,10 +25,11 @@ const routes = [
   { path: '/consumers', exact: true, component: Consumers },
   { path: '/consumers/:consumerId', exact: false, component: ConsumerInfoPage },
   { path: '/dr-events', exact: true, component: EventsPage },
+  { path: '/dr-events/:eventNowId', exact: true, component: EventsPageDate },
   
 
 
-
+  { path: '/contracts', exact: true, component: ContractPage},
   { path: '/users', exact: true, component: UsersPage },
   { path: '/users/:userId', exact: false, component: UserProfilePage },
   { path: '/addresses', exact: true, component: AddressesPage },

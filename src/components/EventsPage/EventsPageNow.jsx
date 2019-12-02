@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import {eventsData} from "../../MockData/EventsMockData";
+import {eventsData} from "../../MockData/EventsMockDataNow";
 import {Dropdown} from "semantic-ui-react";
 import {useHistory} from "react-router";
 import '../Consumers/Consumers.scss';
+import './EventsPage.scss';
 
 
 const VIEW_OPTIONS = [
@@ -29,20 +30,7 @@ const VIEW_OPTIONS = [
   }
 ];
 
-const dateFilterOptions = [
-  {
-    key: '1 января 2019 - 1 сентября 2019',
-    text: '1 января 2019 - 1 сентября 2019',
-    value: '1 января 2019 - 1 сентября 2019',
-  },
-  {
-    key: '1 сентября 2019 - 1 октября 2019',
-    text: '1 сентября 2019 - 1 октября 2019',
-    value: '1 сентября 2019 - 1 октября 2019',
-  },
-];
-
-function EventsPage() {
+function EventsPageNow() {
 
   const [events, setEvents] = useState(eventsData);
   const [selected, setSelected] = useState(eventsData.filter(x => x.selected).length);
@@ -59,57 +47,42 @@ function EventsPage() {
     setEvents(newEvents);
   };
 
-  const handleCheckbox = (item, event) => {
-    event.stopPropagation();
-    item.selected = !item.selected;
-    item.selected ? setSelected(selected + 1) : setSelected(selected - 1)
-    const newEvents = Object.assign([], events);
-    setEvents(newEvents);
-  };
-
   const rowClicked = (id) => {
     history.push(`/dr-events/${id}`);
   };
 
   return (
     <div className="page-content">
-      <div className="header-block">
+      <div className="header-object">
         <h1>События</h1>
+        <span> → Текущее событие</span>
       </div>
       <div className='flex-row'>
         <Dropdown
           defaultValue={VIEW_OPTIONS[0].value}
           fluid
-          icon='angle down'
           className="app-dropdown-button date-range-selector small-input dropdown-margin"
           selection
+          icon='angle down'
           onChange={ handleViewOptionChange }
           options={ VIEW_OPTIONS }
         />
-        <Dropdown
-          defaultValue={dateFilterOptions[0].value}
-          fluid
-          icon='angle down'
-          className="app-dropdown-button date-range-selector dropdown-margin"
-          selection
-          onChange={ handleViewOptionChange }
-          options={ dateFilterOptions }
-        />
       </div>
+      <div className="regular-text">Время события</div>
+      <div className="balance-value">17:00 - 21:00</div>
       <table className="table">
         <thead>
           <tr>
-            <th>Дата и время</th>
             <th>Объект</th>
-            <th>Число участников
-              <td><tr>Плановое</tr></td>
-              <td><tr>Фактическое</tr></td>
-            </th>
+            <th>Потребитель</th>
+            <th>Способ рассчета</th>
+            <th>Снижение <span>кВт·ч</span></th>
             <th>Статус</th>
           </tr>
         </thead>
         <tbody>
         <tr className="sub-header">
+          <td/>
           <td>Сумма</td>
           <td/>
           <th>
@@ -120,8 +93,9 @@ function EventsPage() {
         </tr>
         { events.map((item, index) => (
           <tr key={index} onClick={() => rowClicked(item.id)}>
-            <td >{ item.date }</td>
             <td>{ item.object }</td>
+            <td>{ item.user }</td>
+            <td >{ item.method }</td>
             <th>
               <td className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countPlan }</td>
               <td className={item.countFact === 0 ? "zero-value" : ""}>{ item.countFact }</td>
@@ -133,8 +107,17 @@ function EventsPage() {
         ))}
         </tbody>
       </table>
+      <div className="downloadActs">
+        <p>Скачать акты</p>
+        <p><span>оказания услуг Агрегатор-Потребитель</span></p>
+        <p><span>оказания услуг Агрегатор-СО</span></p>
+        <p><span>о фактическом объеме оказанных Агрегатором услуг</span></p>
+
+        <p className="normal">После скачивания вы сможете отправить файлы системному оператору &nbsp;<span> в разделе Документы → Акты</span></p>
+
+      </div>
     </div>
   );
 }
 
-export default EventsPage;
+export default EventsPageNow;
