@@ -16,6 +16,9 @@ import DocumentsPage from "./components/DocumentsPage/DocumentsPage";
 import EventsPage from "./components/EventsPage/EventsPage";
 import EventsPageNow from "./components/EventsPage/EventsPageNow";
 import EventsPageDate from "./components/EventsPage/EventsPageDate";
+import StatisticPage from "./components/StatisticPage/StatisticPage";
+import ReadyPage from "./components/ReadyPage/ReadyPage";
+import ReadyObjectPage from "./components/ReadyObjectPage/ReadyObjectPage";
 
 const routes = [
   { path: '/objects', exact: true, component: ObjectsPage },
@@ -26,6 +29,9 @@ const routes = [
   { path: '/consumers/:consumerId', exact: false, component: ConsumerInfoPage },
   { path: '/dr-events', exact: true, component: EventsPage },
   { path: '/dr-events/:eventNowId', exact: true, component: EventsPageDate },
+  { path: '/statistic', exact: true, component: StatisticPage },
+  { path: '/ready', exact: true, component: ReadyPage },
+  { path: '/ready/:userId', exact: true, component: ReadyObjectPage },
   
 
 
