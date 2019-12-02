@@ -84,6 +84,13 @@
     margin-top: 8px;
   }
 }
+.large-input {
+  width: 412px !important;
+}
+
+.extra-wide-input {
+  width: 363px !important;
+}
 
 .wide-input {
   width: 353px !important;
@@ -107,6 +114,10 @@
 
 .tiny-input {
   width: 100px !important;
+}
+
+.extra-tiny-input {
+  width: 65px !important;
 }
 
 .tiny-input-uom {
@@ -212,4 +223,17 @@
 .ui.disabled.fluid.search.selection.dropdown.medium-input.app-dropdown-search  {
   opacity: 1 !important;
   color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.address-row {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  .app-input {
+    width: 67px !important;
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
 }

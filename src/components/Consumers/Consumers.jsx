@@ -69,6 +69,7 @@ function Consumers() {
         fluid
         className="small-input app-dropdown-button"
         selection
+        icon='angle down'
         onChange={ handleViewOptionChange }
         options={ VIEW_OPTIONS }
       />
