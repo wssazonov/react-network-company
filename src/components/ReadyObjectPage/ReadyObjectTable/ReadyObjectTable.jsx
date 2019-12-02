@@ -3,7 +3,7 @@ import Table from '../../Table/Table';
 
 function ReadyTable({ objects, onRowClick, onDelete }) {
   const columns = [
-    { title: 'Объект', itemCondition: item => item.addedAt === null },
+    { title: 'Объект', accessor: value => value.object },
     { title: 'Готовность', 
       subColumns: [
         { title:'Текущая',  accessor: value => value.status, format: value => value ? value : '—', styles: { style: { color: 'rgba(0, 0, 0, 0.4)' }, condition: value => value === null } }, 

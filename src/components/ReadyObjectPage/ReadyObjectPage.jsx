@@ -5,10 +5,10 @@ import ReadyObjectTable from './ReadyObjectTable/ReadyObjectTable';
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
-  { object: 'Потребитель 1', status: 'Готов', consumption: '10%' },
-  { object: 'Потребитель 2', status: 'Не готов', consumption: '20%' },
-  { object: 'Потребитель 3', status: 'Готов', consumption: '30%' },
-  { object: 'Потребитель 4', status: 'Не готов', consumption: '40%' },
+  { object: 'Потребитель 1', ready: {status: 'Готов', consumption: '10%' } },
+  { object: 'Потребитель 2', ready: {status: 'Не готов', consumption: '20%' } },
+  { object: 'Потребитель 3', ready: {status: 'Готов', consumption: '30%' } },
+  { object: 'Потребитель 4', ready: {status: 'Не готов', consumption: '40%' } },
 ];
 
 const dateFilterOptions = [
