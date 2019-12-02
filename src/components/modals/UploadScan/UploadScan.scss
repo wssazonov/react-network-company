@@ -1,0 +1,24 @@
+.add-scan-content {
+  margin: 24px;
+}
+
+.add-modal {
+  .modal-content, .modal-dialog {
+    width: 398px !important;
+  }
+}
+
+.modal-cross {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.input-and-buttons {
+  .app-button-group {
+    margin-top: 16px;
+  }
+}

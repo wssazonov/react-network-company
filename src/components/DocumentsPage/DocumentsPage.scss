@@ -18,6 +18,10 @@
   .ui.segment {
     box-shadow: none !important;
     border: none !important;
+    padding: 1px 0;
   }
-
+  .space {
+    justify-content: space-between;
+    margin-top: -16px;
+  }
 }

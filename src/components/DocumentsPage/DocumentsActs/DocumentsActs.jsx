@@ -1,6 +1,8 @@
 import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsActsTable from './DocumentsActsTable/DocumentsActsTable';
+
+import UploadScantModal from "../../modals/UploadScan/UploadScanModal";
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
@@ -54,42 +56,47 @@ const statusOptions = [
 ];
 
 function DocumentsActs() {
+  const childRef = useRef();
   const handleDelete = event => console.log('Clicked delete');
   const handleRowClick = event => console.log('Clicked');
 
   return (
     <div>
-      <div className='flex-row'>
-        <Dropdown
-          defaultValue='С потребителями и СО'
-          fluid
-          className="app-dropdown-button date-range-selector medium-input-dropdown dropdown-margin"
-          selection
-          icon='angle down'
-          options={ usersOptions }
-        />
-        <Dropdown
-          defaultValue='1 января 2019 - 1 сентября 2019'
-          fluid
-          className="app-dropdown-button date-range-selector dropdown-margin"
-          selection
-          icon='angle down'
-          options={ dateFilterOptions }
-        />
-        <Dropdown
-          defaultValue='С любым статусом'
-          fluid
-          className="app-dropdown-button date-range-selector small-input-dropdown dropdown-margin"
-          selection
-          icon='angle down'
-          options={ statusOptions }
-        />
+      <div className='flex-row space'>
+        <div className='flex-row'>
+          <Dropdown
+            defaultValue='С потребителями и СО'
+            fluid
+            className="app-dropdown-button date-range-selector medium-input-dropdown dropdown-margin"
+            selection
+            icon='angle down'
+            options={ usersOptions }
+          />
+          <Dropdown
+            defaultValue='1 января 2019 - 1 сентября 2019'
+            fluid
+            className="app-dropdown-button date-range-selector dropdown-margin"
+            selection
+            icon='angle down'
+            options={ dateFilterOptions }
+          />
+          <Dropdown
+            defaultValue='С любым статусом'
+            fluid
+            className="app-dropdown-button date-range-selector small-input-dropdown dropdown-margin"
+            selection
+            icon='angle down'
+            options={ statusOptions }
+          />
+        </div>
+        <button className='primary-button flex-row' onClick={() => childRef.current.showModal()}>Загрузить скан акта</button>
       </div>
       <DocumentsActsTable 
         documents={ mockInfo } 
         onDelete={ handleDelete } 
         onRowClick={ handleRowClick } 
       />
+      <UploadScantModal ref={childRef}/>
     </div>
   );
 }

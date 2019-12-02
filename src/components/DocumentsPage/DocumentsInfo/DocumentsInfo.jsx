@@ -89,7 +89,7 @@ function DocumentsInfo() {
         documents={ mockInfo } 
         onDelete={ handleDelete } 
         onRowClick={ handleRowClick } 
-        />
+      />
     </div>
   );
 }
