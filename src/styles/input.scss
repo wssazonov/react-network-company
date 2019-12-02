@@ -9,6 +9,13 @@
   .app-input:not(:first-child) {
     margin-top: 12px;
   }
+  .group-title {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+  }
 }
 
 .app-input {
@@ -18,6 +25,7 @@
   align-items: flex-start;
 
   label {
+    width: 430px;
     font-family: "Ubuntu Mono", monospace;
     font-style: normal;
     font-weight: bold;
@@ -45,6 +53,20 @@
     &:focus {
       outline: none;
       background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+  .with-uom {
+    position: relative;
+    .uom {
+      position: absolute;
+      color: rgba(0, 0, 0, 0.4);
+      line-height: 32px;
+      font-size: 16px;
+      bottom: 0;
+      right: 8px;
+    }
+    input {
+      padding-right: 20px;
     }
   }
 }
@@ -85,6 +107,10 @@
 
 .tiny-input {
   width: 100px !important;
+}
+
+.tiny-input-uom {
+  width: 120px !important;
 }
 
 .app-dropdown-search {
