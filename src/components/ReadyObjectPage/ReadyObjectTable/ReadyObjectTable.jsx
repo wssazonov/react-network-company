@@ -1,5 +1,7 @@
 import React from 'react';
 import Table from '../../Table/Table';
+import { formatDate } from '../../../utils';
+import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
 function ReadyTable({ objects, onRowClick, onDelete }) {
   const columns = [
@@ -12,13 +14,34 @@ function ReadyTable({ objects, onRowClick, onDelete }) {
     }
   ];
 
+  const columns2 = [
+    { title: 'Дата', format: date => formatDate(date) },
+    { title: 'Готовность', styles: { 
+        style: { color: '#000000', opacity: 0.4 },
+        style: { color: '#8AB65A' }, condition: value => value === 'Готов' 
+      }  
+    }
+  ];
+
   return (
-    <Table 
-      columns={ columns } 
-      data={ objects } 
-      onDelete= { onDelete }
-      onRowClick={ onRowClick }
-    />
+    <div>
+      <RoleBasedRender requiredRoles={ ['Администратор'] } >
+        <Table 
+          columns={ columns } 
+          data={ objects } 
+          onDelete= { onDelete }
+          onRowClick={ onRowClick }
+        />
+      </RoleBasedRender>
+      <RoleBasedRender requiredRoles={ ['Потребитель'] } >
+        <Table 
+          columns={ columns2 } 
+          data={ objects } 
+          onDelete= { onDelete }
+          onRowClick={ onRowClick }
+        />
+      </RoleBasedRender>
+    </div>
   );
 }
 

@@ -36,6 +36,7 @@ const routes = [
   { path: '/statistic', component: StatisticPage },
   { path: '/ready', exact: true, component: ReadyPage },
   { path: '/ready/:userId', exact: true, component: ReadyObjectPage },
+  { path: '/ready-object', exact: true, component: ReadyObjectPage },
   
 
 
