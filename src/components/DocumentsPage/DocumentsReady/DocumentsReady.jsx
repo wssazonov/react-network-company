@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsReadyTable from './DocumentsReadyTable/DocumentsReadyTable';
 import UploadMaketModal from "../../modals/UploadMaket/UploadMaketModal";
-// import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
+import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
   { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
@@ -13,6 +13,17 @@ const mockInfo = [
   { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Отправлен' },
   { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
   { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
+];
+
+const mockInfo2 = [
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
 ];
 
 const dateFilterOptions = [
@@ -63,14 +74,16 @@ function DocumentsReady() {
     <div>
       <div className='flex-row space'>
         <div className='flex-row'>
-          <Dropdown
-            defaultValue='Все объекты'
-            fluid
-            className="app-dropdown-button date-range-selector small-input dropdown-margin"
-            selection
-            icon='angle down'
-            options={ objectsOptions }
-          />
+          <RoleBasedRender requiredRoles={ ['Администратор'] } >
+            <Dropdown
+              defaultValue='Все объекты'
+              fluid
+              className="app-dropdown-button date-range-selector small-input dropdown-margin"
+              selection
+              icon='angle down'
+              options={ objectsOptions }
+            />
+          </RoleBasedRender>
           <Dropdown
             defaultValue='1 января 2019 - 1 сентября 2019'
             fluid
@@ -88,14 +101,25 @@ function DocumentsReady() {
             options={ statusOptions }
           />
         </div>
-        <button className='primary-button flex-row' onClick={() => childRef.current.showModal()}>Загрузить макет Availability</button>
+        <RoleBasedRender requiredRoles={ ['Администратор'] } >
+          <button className='primary-button flex-row' onClick={() => childRef.current.showModal()}>Загрузить макет Availability</button>
+        </RoleBasedRender>
       </div>
-      <DocumentsReadyTable 
-        objects={ mockInfo } 
-        onDelete={ handleDelete } 
-        onRowClick={ handleRowClick } 
+      <RoleBasedRender requiredRoles={ ['Администратор'] } >
+        <DocumentsReadyTable 
+          objects={ mockInfo } 
+          onDelete={ handleDelete } 
+          onRowClick={ handleRowClick } 
         />
-        <UploadMaketModal ref={childRef}/>
+      </RoleBasedRender>
+      <RoleBasedRender requiredRoles={ ['Потребитель'] } >
+        <DocumentsReadyTable 
+          objects={ mockInfo2 } 
+          onDelete={ handleDelete } 
+          onRowClick={ handleRowClick } 
+        />
+      </RoleBasedRender>
+      <UploadMaketModal ref={childRef}/>
     </div>
   );
 }

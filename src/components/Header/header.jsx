@@ -11,24 +11,14 @@ import ReplenishModal from "../modals/Replenish/ReplenishModal";
 
 const ROLE_OPTIONS = [
   {
-    key: 'Клиент',
-    text: 'Клиент',
-    value: 'Клиент',
-  },
-  {
     key: 'Администратор',
     text: 'Администратор',
     value: 'Администратор',
   },
   {
-    key: 'Менеджер',
-    text: 'Менеджер',
-    value: 'Менеджер',
-  },
-  {
-    key: 'Наблюдатель',
-    text: 'Наблюдатель',
-    value: 'Наблюдатель',
+    key: 'Потребитель',
+    text: 'Потребитель',
+    value: 'Потребитель',
   }
 ];
 

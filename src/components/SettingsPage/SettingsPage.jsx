@@ -43,6 +43,7 @@ function SettingsPage() {
             defaultValue='19:00'
             placeholder='Время отправки уведомлений потребителям'
             fluid
+            icon='angle down'
             className="time-send app-dropdown-button"
             selection
             options={TIME_OPTIONS}

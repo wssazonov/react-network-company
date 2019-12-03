@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsConsumptionTable from './DocumentsConsumptionTable/DocumentsConsumptionTable';
-// import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
+import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
   { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
@@ -12,6 +12,17 @@ const mockInfo = [
   { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
   { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
   { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
+];
+
+const mockInfo2 = [
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
 ];
 
 const dateFilterOptions = [
@@ -69,22 +80,24 @@ function DocumentsConsumption() {
     <div>
       <div className='flex-row space'>
         <div className='flex-row'>
-          <Dropdown
-            defaultValue='Все объекты'
-            fluid
-            className="app-dropdown-button date-range-selector small-input dropdown-margin"
-            selection
-            icon='angle down'
-            options={ objectsOptions }
-          />
-          <Dropdown
-            defaultValue='Все потребители'
-            fluid
-            className="app-dropdown-button date-range-selector small-input dropdown-margin"
-            selection
-            icon='angle down'
-            options={ usersOptions }
-          />
+          <RoleBasedRender requiredRoles={ ['Администратор'] } >
+            <Dropdown
+              defaultValue='Все объекты'
+              fluid
+              className="app-dropdown-button date-range-selector small-input dropdown-margin"
+              selection
+              icon='angle down'
+              options={ objectsOptions }
+            />
+            <Dropdown
+              defaultValue='Все потребители'
+              fluid
+              className="app-dropdown-button date-range-selector small-input dropdown-margin"
+              selection
+              icon='angle down'
+              options={ usersOptions }
+            />
+          </RoleBasedRender>
           <Dropdown
             defaultValue='1 января 2019 - 1 сентября 2019'
             fluid
@@ -103,11 +116,21 @@ function DocumentsConsumption() {
           />
         </div>
       </div>
-      <DocumentsConsumptionTable 
-        documents={ mockInfo } 
-        onDelete={ handleDelete } 
-        onRowClick={ handleRowClick } 
+
+      <RoleBasedRender requiredRoles={ ['Администратор'] } > 
+        <DocumentsConsumptionTable 
+          documents={ mockInfo } 
+          onDelete={ handleDelete } 
+          onRowClick={ handleRowClick } 
         />
+      </RoleBasedRender>
+      <RoleBasedRender requiredRoles={ ['Потребитель'] } > 
+        <DocumentsConsumptionTable 
+          documents={ mockInfo2 } 
+          onDelete={ handleDelete } 
+          onRowClick={ handleRowClick } 
+        />
+      </RoleBasedRender>
     </div>
   );
 }
