@@ -120,6 +120,7 @@ function Consumers() {
         ))}
         </tbody>
       </table>
+      <button className="download-button primary-button">Скачать анкету по выбранным потребителям</button>
     </div>
   );
 }

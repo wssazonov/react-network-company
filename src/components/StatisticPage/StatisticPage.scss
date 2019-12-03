@@ -18,6 +18,26 @@
   flex-direction: row;
   justify-content: start;
   align-items: start;
+  .search-input {
+    position: relative;
+    margin-bottom: 7px;
+    input {
+      height: 20px;
+      border: none;
+      border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.2);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    svg {
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+    }
+  }
   .tree-nav-block {
     display: flex;
     flex-direction: column;
