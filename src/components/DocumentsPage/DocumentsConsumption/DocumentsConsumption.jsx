@@ -67,39 +67,41 @@ function DocumentsConsumption() {
 
   return (
     <div>
-      <div className='flex-row'>
-        <Dropdown
-          defaultValue='Все объекты'
-          fluid
-          className="app-dropdown-button date-range-selector small-input dropdown-margin"
-          selection
-          icon='angle down'
-          options={ objectsOptions }
-        />
-        <Dropdown
-          defaultValue='Все потребители'
-          fluid
-          className="app-dropdown-button date-range-selector small-input dropdown-margin"
-          selection
-          icon='angle down'
-          options={ usersOptions }
-        />
-        <Dropdown
-          defaultValue='1 января 2019 - 1 сентября 2019'
-          fluid
-          className="app-dropdown-button date-range-selector dropdown-margin"
-          selection
-          icon='angle down'
-          options={ dateFilterOptions }
-        />
-        <Dropdown
-          defaultValue='С любым статусом'
-          fluid
-          className="app-dropdown-button date-range-selector small-input-dropdown dropdown-margin"
-          selection
-          icon='angle down'
-          options={ statusOptions }
-        />
+      <div className='flex-row space'>
+        <div className='flex-row'>
+          <Dropdown
+            defaultValue='Все объекты'
+            fluid
+            className="app-dropdown-button date-range-selector small-input dropdown-margin"
+            selection
+            icon='angle down'
+            options={ objectsOptions }
+          />
+          <Dropdown
+            defaultValue='Все потребители'
+            fluid
+            className="app-dropdown-button date-range-selector small-input dropdown-margin"
+            selection
+            icon='angle down'
+            options={ usersOptions }
+          />
+          <Dropdown
+            defaultValue='1 января 2019 - 1 сентября 2019'
+            fluid
+            className="app-dropdown-button date-range-selector dropdown-margin"
+            selection
+            icon='angle down'
+            options={ dateFilterOptions }
+          />
+          <Dropdown
+            defaultValue='С любым статусом'
+            fluid
+            className="app-dropdown-button date-range-selector small-input-dropdown dropdown-margin"
+            selection
+            icon='angle down'
+            options={ statusOptions }
+          />
+        </div>
       </div>
       <DocumentsConsumptionTable 
         documents={ mockInfo } 

@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsReadyTable from './DocumentsReadyTable/DocumentsReadyTable';
+import UploadMaketModal from "../../modals/UploadMaket/UploadMaketModal";
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
@@ -54,42 +55,47 @@ const statusOptions = [
 ];
 
 function DocumentsReady() {
+  const childRef = useRef();
   const handleDelete = event => console.log('Clicked delete');
   const handleRowClick = event => console.log('Clicked');
 
   return (
     <div>
-      <div className='flex-row'>
-        <Dropdown
-          defaultValue='Все объекты'
-          fluid
-          className="app-dropdown-button date-range-selector small-input dropdown-margin"
-          selection
-          icon='angle down'
-          options={ objectsOptions }
-        />
-        <Dropdown
-          defaultValue='1 января 2019 - 1 сентября 2019'
-          fluid
-          className="app-dropdown-button date-range-selector dropdown-margin"
-          selection
-          icon='angle down'
-          options={ dateFilterOptions }
-        />
-        <Dropdown
-          defaultValue='С любым статусом'
-          fluid
-          className="app-dropdown-button date-range-selector small-input-dropdown dropdown-margin"
-          selection
-          icon='angle down'
-          options={ statusOptions }
-        />
+      <div className='flex-row space'>
+        <div className='flex-row'>
+          <Dropdown
+            defaultValue='Все объекты'
+            fluid
+            className="app-dropdown-button date-range-selector small-input dropdown-margin"
+            selection
+            icon='angle down'
+            options={ objectsOptions }
+          />
+          <Dropdown
+            defaultValue='1 января 2019 - 1 сентября 2019'
+            fluid
+            className="app-dropdown-button date-range-selector dropdown-margin"
+            selection
+            icon='angle down'
+            options={ dateFilterOptions }
+          />
+          <Dropdown
+            defaultValue='С любым статусом'
+            fluid
+            className="app-dropdown-button date-range-selector small-input-dropdown dropdown-margin"
+            selection
+            icon='angle down'
+            options={ statusOptions }
+          />
+        </div>
+        <button className='primary-button flex-row' onClick={() => childRef.current.showModal()}>Загрузить макет Availability</button>
       </div>
       <DocumentsReadyTable 
         objects={ mockInfo } 
         onDelete={ handleDelete } 
         onRowClick={ handleRowClick } 
         />
+        <UploadMaketModal ref={childRef}/>
     </div>
   );
 }
