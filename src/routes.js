@@ -34,7 +34,6 @@ const routes = [
   { path: '/dr-events', exact: true, component: EventsPage },
   { path: '/dr-events/:eventNowId', exact: true, component: EventsPageDate },
   { path: '/statistic', component: StatisticPage },
-  { path: '/statistic', component: StatisticAgregatorPage },
   { path: '/ready', exact: true, component: ReadyPage },
   { path: '/ready/:userId', exact: true, component: ReadyObjectPage },
   

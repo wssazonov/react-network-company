@@ -74,7 +74,7 @@ function StyledTreeItem(props) {
     <TreeItem
       name="b"
       label={
-        <NavLink name="a" className="link-label" to={'/statistic' + link}>{ name }</NavLink>
+        <NavLink activeClassName='active-tree-link' className="link-label" to={'/statistic' + link}>{ name }</NavLink>
       }
       classes={{ group: classes.group }}
       nodeId={nodeId}
@@ -95,10 +95,10 @@ function StatisticPage() {
   let data = treeData;
   let nodeCounter = 0;
   return (
-    <div className="addresses-page">
+    <div className="addresses-page statistic-page">
 
       <div className="tree-nav-block">
-        <NavLink to={'/statistic'} className="agregator-link">Агрегатор</NavLink>
+        <NavLink activeClassName='active-tree-link' to={'/statistic'} className="agregator-link">Агрегатор</NavLink>
         <TreeView defaultEndIcon={<div style={{ width: 24 }} />} defaultCollapseIcon={<ArrowDropDownIcon/>} defaultExpandIcon={<ArrowRightIcon/>} expanded={expanded} onNodeToggle={handleChange}>
           {
             data.map(firstLevel =>
