@@ -3,3 +3,59 @@
     font-weight: normal !important;
   }
 }
+
+.addresses-page {
+  text-align: left;
+  width: 100%;
+  padding: 16px 17px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  .tree-nav-block {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+    padding: 0 6px 24px;
+    .agregator-link {
+      padding-left: 24px;
+      color: black;
+      &:hover {
+        background: rgba(26, 165, 184, 0.15);
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+svg.MuiSvgIcon-root {
+  fill: rgba(0, 0, 0, 0.4);
+}
+
+.link-label, .link-label:hover {
+  color: black;
+}
+.MuiTreeView-root {
+  .MuiTreeItem-content:hover {
+    background: transparent;
+  }
+  .MuiTreeItem-root:focus {
+    .MuiTreeItem-content {
+      background: transparent;
+    }
+  }
+}
+ul.MuiTreeView-root {
+  .MuiTreeItem-content:hover {
+    background: rgba(26, 165, 184, 0.15);
+    border-radius: 2px;
+  }
+  .MuiTreeItem-root:focus {
+    > .MuiTreeItem-content {
+      background: rgba(26, 165, 184, 0.2);
+      border-radius: 2px;
+      mix-blend-mode: normal;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

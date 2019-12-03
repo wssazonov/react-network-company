@@ -19,6 +19,10 @@ import EventsPageDate from "./components/EventsPage/EventsPageDate";
 import StatisticPage from "./components/StatisticPage/StatisticPage";
 import ReadyPage from "./components/ReadyPage/ReadyPage";
 import ReadyObjectPage from "./components/ReadyObjectPage/ReadyObjectPage";
+import StatisticObjectPage from "./components/StatisticPage/StatisticObjectPage/StatisticObjectPage";
+import StatisticUserPage from "./components/StatisticPage/StatisticUserPage/StatisticUserPage";
+import StatisticDevicePage from "./components/StatisticPage/StatisticDevicePage/StatisticDevicePage";
+import StatisticAgregatorPage from "./components/StatisticPage/StatisticAgregatorPage/StatisticAgregatorPage";
 
 const routes = [
   { path: '/objects', exact: true, component: ObjectsPage },
@@ -29,7 +33,8 @@ const routes = [
   { path: '/consumers/:consumerId', exact: false, component: ConsumerInfoPage },
   { path: '/dr-events', exact: true, component: EventsPage },
   { path: '/dr-events/:eventNowId', exact: true, component: EventsPageDate },
-  { path: '/statistic', exact: true, component: StatisticPage },
+  { path: '/statistic', component: StatisticPage },
+  { path: '/statistic', component: StatisticAgregatorPage },
   { path: '/ready', exact: true, component: ReadyPage },
   { path: '/ready/:userId', exact: true, component: ReadyObjectPage },
   

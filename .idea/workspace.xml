@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8866dd20-0e95-446d-8276-ca243208462e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ConsumerInfo/ConsumerInfoPage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConsumerInfo/ConsumerInfoPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConsumerInfo/ConsumerInfoPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StatisticPage/StatisticPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StatisticPage/StatisticPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StatisticPage/StatisticPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StatisticPage/StatisticPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +81,7 @@
       <workItem from="1575150645105" duration="1404000" />
       <workItem from="1575230558824" duration="4269000" />
       <workItem from="1575334628277" duration="5144000" />
+      <workItem from="1575367492115" duration="10702000" />
     </task>
     <task id="LOCAL-00001" summary="Потребители готовы">
       <created>1575014204452</created>
