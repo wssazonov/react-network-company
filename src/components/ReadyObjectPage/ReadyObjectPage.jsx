@@ -4,6 +4,14 @@ import './ReadyObjectPage.scss';
 import ReadyObjectTable from './ReadyObjectTable/ReadyObjectTable';
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 import SentReadyModal from "../modals/SentReady/SentReadyModal";
+import { Tab } from 'semantic-ui-react'
+
+const panes = [
+  {
+    menuItem: 'Статистика',
+    render: () => <Tab.Pane attached={false}></Tab.Pane>,
+  },
+]
 
 const mockInfo = [
   { object: 'Потребитель 1', ready: {status: 'Готов', consumption: '10%' } },
@@ -39,16 +47,17 @@ function ReadyPage({ history, match }) {
   const resetChanges = event => console.log('Clicked Cancel');
 
   return (
-    <div className="page-content addresses-page">
+    <div className="page-content addresses-page ready-page">
       <div className="statisticHeader">
         <h1>Готовность <span>Объект 1</span></h1>
       </div>
-      <RoleBasedRender requiredRoles={ ['Потребитель'] } >
+      <RoleBasedRender requiredRoles={ ['Потребитель'] } className="status-object">
         <div className="regular-text">Статус на 24 ноября</div>
         <div className='flex-row'>
           <div className="balance-value">Готов</div>
           <button className='primary-button' onClick={() => childRef.current.showModal()}>Уведомить о неготовности</button>
         </div>
+        <Tab menu={{ secondary: true, pointing: true }} panes={panes}/>
       </RoleBasedRender>
       <div className='flex-row'>
         <Dropdown
