@@ -61,7 +61,7 @@ function ObjectDetail({ object, onSubmit}) {
     setFormState(object);
   };
   return (
-    <div className='page-content profile-page'>
+    <div className='profile-page'>
       <div className="header-object">
         <h1>Объекты</h1>
         <span> → Объект 1</span>
