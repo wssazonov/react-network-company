@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8866dd20-0e95-446d-8276-ca243208462e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ConsumerInfo/ConsumerInfoPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ConsumerInfo/ConsumerInfoPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConsumerInfo/ConsumerInfoPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Consumers/Consumers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Consumers/Consumers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/layout.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +78,7 @@
       <workItem from="1575003829276" duration="9651000" />
       <workItem from="1575150645105" duration="1404000" />
       <workItem from="1575230558824" duration="4269000" />
+      <workItem from="1575334628277" duration="5144000" />
     </task>
     <task id="LOCAL-00001" summary="Потребители готовы">
       <created>1575014204452</created>
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575234997693</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deploy test">
+      <created>1575321289936</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575321289936</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Потребители готовы" />
     <MESSAGE value="ConsumerInfo markup" />
-    <option name="LAST_COMMIT_MESSAGE" value="ConsumerInfo markup" />
+    <MESSAGE value="deploy test" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy test" />
   </component>
 </project>
