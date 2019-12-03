@@ -47,7 +47,8 @@ function EventsPage() {
   const [events, setEvents] = useState(eventsData);
   const [selected, setSelected] = useState(eventsData.filter(x => x.selected).length);
   const history = useHistory();
-  const valueSum = events.reduce((a, c) => a + c.value, 0).toFixed(2);
+  const valueSum1 = events.reduce((a, c) => a + c.countPlan, 0).toFixed(2);
+  const valueSum2 = events.reduce((a, c) => a + c.countFact, 0).toFixed(2);
   const [viewOption, setViewOption] = useState([VIEW_OPTIONS[0].value]);
   const handleViewOptionChange = (event, { value }) => setViewOption(value);
 
@@ -113,8 +114,8 @@ function EventsPage() {
           <td>Сумма</td>
           <td/>
           <th>
-            <td>{ valueSum }</td>
-            <td>{ valueSum } </td>
+            <td>{ valueSum1 }</td>
+            <td>{ valueSum2 } </td>
           </th>
           <td/>
         </tr>

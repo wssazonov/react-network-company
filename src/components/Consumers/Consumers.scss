@@ -64,3 +64,13 @@
   width: 340px;
   margin-top: 16px;
 }
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+.participants-count {
+  width: 50px;
+  max-width: 50px;
+  overflow-x: visible;
+  white-space: nowrap;
+}
