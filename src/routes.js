@@ -23,6 +23,7 @@ import StatisticObjectPage from "./components/StatisticPage/StatisticObjectPage/
 import StatisticUserPage from "./components/StatisticPage/StatisticUserPage/StatisticUserPage";
 import StatisticDevicePage from "./components/StatisticPage/StatisticDevicePage/StatisticDevicePage";
 import StatisticAgregatorPage from "./components/StatisticPage/StatisticAgregatorPage/StatisticAgregatorPage";
+import ReadyNavPage from "./components/ReadyNavPage/ReadyNavPage";
 
 const routes = [
   { path: '/objects', exact: true, component: ObjectsPage },
@@ -34,9 +35,7 @@ const routes = [
   { path: '/dr-events', exact: true, component: EventsPage },
   { path: '/dr-events/:eventNowId', exact: true, component: EventsPageDate },
   { path: '/statistic', component: StatisticPage },
-  { path: '/ready', exact: true, component: ReadyPage },
-  { path: '/ready/:userId', exact: true, component: ReadyObjectPage },
-  { path: '/ready-object', exact: true, component: ReadyObjectPage },
+  { path: '/ready', component: ReadyNavPage },
   
 
 
