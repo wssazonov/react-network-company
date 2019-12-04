@@ -35,17 +35,10 @@ function EventsPageNow() {
   const [events, setEvents] = useState(eventsData);
   const [selected, setSelected] = useState(eventsData.filter(x => x.selected).length);
   const history = useHistory();
-  const valueSum = events.reduce((a, c) => a + c.value, 0).toFixed(2);
   const [viewOption, setViewOption] = useState([VIEW_OPTIONS[0].value]);
   const handleViewOptionChange = (event, { value }) => setViewOption(value);
-
-
-  const toggleStatus = (item, event) => {
-    event.stopPropagation();
-    item.status = !item.status;
-    const newEvents = Object.assign([], events);
-    setEvents(newEvents);
-  };
+  const valueSum1 = events.reduce((a, c) => a + c.countPlan, 0).toFixed(2);
+  const valueSum2 = events.reduce((a, c) => a + c.countFact, 0).toFixed(2);
 
   const rowClicked = (id) => {
     history.push(`/dr-events/${id}`);
@@ -70,14 +63,26 @@ function EventsPageNow() {
       </div>
       <div className="regular-text">Время события</div>
       <div className="balance-value">17:00 - 21:00</div>
-      <table className="table">
+      <table className="table events-table">
         <thead>
           <tr>
             <th>Объект</th>
             <th>Потребитель</th>
             <th>Способ рассчета</th>
-            <th>Снижение <span>кВт·ч</span></th>
+            <th className="wide-cell">Снижение <span>кВт·ч</span></th>
             <th>Статус</th>
+          </tr>
+          <tr>
+            <th/>
+            <th/>
+            <th/>
+            <th className="wide-cell">
+              <div className="participants-count">
+                <div>Плановое</div>
+                <div>Фактическое</div>
+              </div>
+            </th>
+            <th/>
           </tr>
         </thead>
         <tbody>
@@ -85,10 +90,12 @@ function EventsPageNow() {
           <td/>
           <td>Сумма</td>
           <td/>
-          <th>
-            <td>{ valueSum }</td>
-            <td>{ valueSum } </td>
-          </th>
+          <td>
+            <div className="participants-count">
+              <div>{ valueSum1 }</div>
+              <div>{ valueSum2 }</div>
+            </div>
+          </td>
           <td/>
         </tr>
         { events.map((item, index) => (
@@ -96,11 +103,13 @@ function EventsPageNow() {
             <td>{ item.object }</td>
             <td>{ item.user }</td>
             <td >{ item.method }</td>
-            <th>
-              <td className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countPlan }</td>
-              <td className={item.countFact === 0 ? "zero-value" : ""}>{ item.countFact }</td>
-            </th>
-            <td className={ (item.status ? "active" : "not-active") + ' button-status'}>
+            <td>
+              <div className="participants-count">
+                <div className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countPlan }</div>
+                <div className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countFact }</div>
+              </div>
+            </td>
+            <td className="button-status">
               { item.status ? "Выполняется" : "Завершено" }
             </td>
           </tr>

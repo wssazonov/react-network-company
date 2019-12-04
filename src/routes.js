@@ -34,6 +34,7 @@ const routes = [
   { path: '/consumers/:consumerId', exact: false, component: ConsumerInfoPage },
   { path: '/dr-events', exact: true, component: EventsPage },
   { path: '/dr-events/:eventNowId', exact: true, component: EventsPageDate },
+  { path: '/dr-events/now/:eventNowId', exact: true, component: EventsPageNow },
   { path: '/statistic', component: StatisticPage },
   { path: '/ready', component: ReadyNavPage },
   

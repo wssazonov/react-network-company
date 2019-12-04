@@ -24,3 +24,44 @@
     font-weight: normal !important;
   }
 }
+.participants-count {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  > div {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.wide-cell {
+  min-width: 180px;
+}
+
+.bold-row {
+  font-weight: bold;
+}
+
+.events-table {
+  tbody {
+    tr:hover {
+      td:first-child, td:nth-child(2) {
+        color: #1AA5B8;
+        text-decoration: underline;
+      }
+    }
+  }
+  th {
+    span {
+      font-weight: normal;
+    }
+  }
+  .not-success, .not-success:hover  {
+    //background: #F85D1F;
+    background: rgba(248, 93, 31, 0.4);
+    color: black;
+    mix-blend-mode: darken;
+    //opacity: 0.4;
+  }
+}

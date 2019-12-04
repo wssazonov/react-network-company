@@ -52,24 +52,9 @@ function EventsPage() {
   const [viewOption, setViewOption] = useState([VIEW_OPTIONS[0].value]);
   const handleViewOptionChange = (event, { value }) => setViewOption(value);
 
-
-  const toggleStatus = (item, event) => {
-    event.stopPropagation();
-    item.status = !item.status;
-    const newEvents = Object.assign([], events);
-    setEvents(newEvents);
-  };
-
-  const handleCheckbox = (item, event) => {
-    event.stopPropagation();
-    item.selected = !item.selected;
-    item.selected ? setSelected(selected + 1) : setSelected(selected - 1)
-    const newEvents = Object.assign([], events);
-    setEvents(newEvents);
-  };
-
-  const rowClicked = (id) => {
-    history.push(`/dr-events/${id}`);
+  const rowClicked = (item) => {
+    console.log(item.status);
+    item.status ? history.push(`/dr-events/now/${item.id}`) : history.push(`/dr-events/${item.id}`);
   };
 
   return (
@@ -97,37 +82,49 @@ function EventsPage() {
           options={ dateFilterOptions }
         />
       </div>
-      <table className="table">
+      <table className="table events-table">
         <thead>
           <tr>
             <th>Дата и время</th>
             <th>Объект</th>
-            <th>Число участников
-              <td><tr>Плановое</tr></td>
-              <td><tr>Фактическое</tr></td>
-            </th>
+            <th>Число участников</th>
             <th>Статус</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th className="wide-cell">
+              <div className="participants-count">
+                <div>Плановое</div>
+                <div>Фактическое</div>
+              </div>
+            </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
         <tr className="sub-header">
           <td>Сумма</td>
           <td/>
-          <th>
-            <td>{ valueSum1 }</td>
-            <td>{ valueSum2 } </td>
-          </th>
+          <td>
+            <div className="participants-count">
+              <div>{ valueSum1 }</div>
+              <div>{ valueSum2 }</div>
+            </div>
+          </td>
           <td/>
         </tr>
         { events.map((item, index) => (
-          <tr key={index} onClick={() => rowClicked(item.id)}>
+          <tr key={index} onClick={() => rowClicked(item)} className={item.status ? 'bold-row' : ''}>
             <td >{ item.date }</td>
             <td>{ item.object }</td>
-            <th>
-              <td className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countPlan }</td>
-              <td className={item.countFact === 0 ? "zero-value" : ""}>{ item.countFact }</td>
-            </th>
-            <td className={ (item.status ? "active" : "not-active") + ' button-status'}>
+            <td>
+              <div className="participants-count">
+                <div className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countPlan }</div>
+                <div className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countFact }</div>
+              </div>
+            </td>
+            <td className="button-status">
               { item.status ? "Выполняется" : "Завершено" }
             </td>
           </tr>

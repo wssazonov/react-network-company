@@ -8,7 +8,7 @@ export const eventsData = [
     method: 'Базовая нагрузка',
     countPlan: 10.12,
     countFact: 123,
-    status: true
+    status: false
   },
   {
     id: 1,
