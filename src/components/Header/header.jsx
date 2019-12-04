@@ -1,7 +1,10 @@
 import React, {useRef} from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.svg'
-import './header.scss'
+import logo from '../../assets/logo.svg';
+import bell from '../../assets/bell.svg';
+import bellPushed from '../../assets/bell-pushed.svg';
+import close from '../../assets/close.svg';
+import './header.scss';
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 import { Dropdown } from 'semantic-ui-react';
 import { connect } from 'react-redux';
@@ -87,11 +90,12 @@ function Header({ userRole, setUserRole, contractStatus }) {
         </ul>
     
         <div className="balans">
-          <div>
+          <div className="popover">
             {/* <Button aria-describedby={id} variant="contained" color="primary" onClick={handleClick}>
               Open Popover
             </Button> */}
-            <i className="bell outlet icon" onClick={handleClick}></i>
+            <img src={bell} alt="logo" onClick={handleClick}/>
+            {/* <i className="bell outlet icon" onClick={handleClick}></i> */}
             <Popover
               id={id}
               open={open}
@@ -106,7 +110,8 @@ function Header({ userRole, setUserRole, contractStatus }) {
                 horizontal: 'center',
               }}
             >
-              <Typography className={classes.typography}>The content of the Popover.</Typography>
+              <Typography className="typography-header">Уведомления <img src={close} alt="logo"/></Typography>
+              <Typography className={classes.typography}><img src={bellPushed} alt="logo"/>Необходимо отправить макет Availability</Typography>
             </Popover>
           </div>
           <ul>

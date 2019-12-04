@@ -136,6 +136,22 @@ nav > div > ul > li > div ul > li > a {
 
 .balans {
   display: flex;
+  .popover {
+    .typograpghy-header {
+      span{
+        font-family: Ubuntu Mono;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        opacity: 0.4;
+  
+      }
+    }
+  }
   .bell {
     position: relative;
     .notification-container {
@@ -195,6 +211,3 @@ nav > div > ul > li > div ul > li > a {
   border-bottom: none !important;
 }
 
-.typograpghy {
-  margin-top: 10px;
-}
