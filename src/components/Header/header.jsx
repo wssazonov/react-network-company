@@ -63,7 +63,7 @@ function Header({ userRole, setUserRole, contractStatus }) {
         </ul>
     
         <div className="balans">
-          <div className="bell">123
+          {/* <div className="bell">123
             <div className="notification-container">
 
               <div className="ui positive green message">
@@ -73,7 +73,7 @@ function Header({ userRole, setUserRole, contractStatus }) {
               </div>
 
             </div>
-          </div>
+          </div> */}
           <ul>
             <li className="logo">
               <NavLink className="link linkBorder" to=''>mail@mail.mail <span className="caret"></span></NavLink>
