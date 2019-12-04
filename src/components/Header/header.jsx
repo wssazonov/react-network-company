@@ -9,6 +9,15 @@ import { setUserRole } from '../../store/user/actions';
 import WithdrawMoneyModal from "../modals/WithdrawModey/WithdrawMoneyModal";
 import ReplenishModal from "../modals/Replenish/ReplenishModal";
 
+import { makeStyles } from '@material-ui/core/styles';
+import { Popover, Typography, Button } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+  typography: {
+    padding: theme.spacing(2),
+  },
+}));
+
 const ROLE_OPTIONS = [
   {
     key: 'Администратор',
@@ -23,6 +32,21 @@ const ROLE_OPTIONS = [
 ];
 
 function Header({ userRole, setUserRole, contractStatus }) {
+
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
+
   const handleRoleChange = (event, data) => setUserRole(data.value);
 
   const childWithdrawRef = useRef();
@@ -63,17 +87,28 @@ function Header({ userRole, setUserRole, contractStatus }) {
         </ul>
     
         <div className="balans">
-          {/* <div className="bell">123
-            <div className="notification-container">
-
-              <div className="ui positive green message">
-                <i className="close icon"></i>
-                <div className="header">Уведомления</div>
-                <p>The first notification</p>
-              </div>
-
-            </div>
-          </div> */}
+          <div>
+            {/* <Button aria-describedby={id} variant="contained" color="primary" onClick={handleClick}>
+              Open Popover
+            </Button> */}
+            <i className="bell outlet icon" onClick={handleClick}></i>
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'center',
+              }}
+            >
+              <Typography className={classes.typography}>The content of the Popover.</Typography>
+            </Popover>
+          </div>
           <ul>
             <li className="logo">
               <NavLink className="link linkBorder" to=''>mail@mail.mail <span className="caret"></span></NavLink>
