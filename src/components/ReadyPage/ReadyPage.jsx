@@ -30,7 +30,7 @@ function ReadyPage({ history, match }) {
   const resetChanges = event => console.log('Clicked Cancel');
 
   return (
-    <div className="page-content addresses-page">
+    <div className="addresses-page">
       <div className="statisticHeader">
         <h1>Готовность <span>Агрегатор</span></h1>
       </div>
