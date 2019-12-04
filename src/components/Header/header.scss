@@ -136,6 +136,24 @@ nav > div > ul > li > div ul > li > a {
 
 .balans {
   display: flex;
+  .bell {
+    position: relative;
+    .notification-container {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+  .notifications {
+    min-width: 300px;
+    margin-right: 100px;
+    ul {
+      margin-right: auto;
+      li {
+        width: 100%;
+      }
+    }
+  }
   div {
     span {
       padding: 0 10px;
