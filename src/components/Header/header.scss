@@ -136,58 +136,10 @@ nav > div > ul > li > div ul > li > a {
 
 .balans {
   display: flex;
-  .popover {
-    .typograpghy-header {
-      span{
-        font-family: Ubuntu Mono;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        display: flex;
-        align-items: center;
-        color: #000000;
-        opacity: 0.4;
-  
-      }
-    }
-  }
-  .bell {
-    position: relative;
-    .notification-container {
-      position: absolute;
-      bottom: 0;
-      z-index: 1;
-    }
-  }
-  .notifications {
-    min-width: 300px;
-    margin-right: 100px;
-    ul {
-      margin-right: auto;
-      li {
-        width: 100%;
-      }
-    }
-  }
-  div {
-    span {
-      padding: 0 10px;
-      font-family: Ubuntu Mono;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 24px;
-      align-items: center;
-      text-align: right;
-      color: #000000;
-    }
-    button {
-      height: 24px;
-      margin: 4px 5px;
-    }
-  }
+  height: 100%;
+  align-items: center;
   ul {
+    margin-left: 12px;
     li {
       margin-right: 12px;
     }
@@ -209,5 +161,76 @@ nav > div > ul > li > div ul > li > a {
 
 .linkBorder {
   border-bottom: none !important;
+}
+
+.popup-header {
+  height: 24px;
+  padding: 4px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  span {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  svg {
+    cursor: pointer;
+  }
+}
+
+.notifications-container {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 4px;
+    .notification-text {
+      padding: 0 4px;
+      line-height: 16px;
+      font-family: "Ubuntu Mono", monospace;
+      font-size: 14px;
+      color: black;
+      flex-grow: 1;
+    }
+    svg {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+    }
+  }
+}
+
+.bell {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 2px;
+  cursor: pointer;
+  &.bell-active {
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(26, 165, 184, 0.2), rgba(26, 165, 184, 0.2)), #FFFFFF;
+    mix-blend-mode: normal;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  }
+  .orange-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #F85D1F;
+    left: 4px;
+    top: 5px
+  }
 }
 
