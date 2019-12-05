@@ -80,12 +80,12 @@ function Header({ userRole, setUserRole, contractStatus }) {
             <li><NavLink className="link" activeClassName="active-link" to="/objects">Объекты</NavLink></li>
             <li><NavLink className="link" activeClassName="active-link" to="/consumers">Потребители</NavLink></li>
             <li><NavLink className="link" activeClassName="active-link" to="/statistic">Статистика</NavLink></li>
-            <RoleBasedRender requiredRoles={ ['Администратор'] } >
+            <RoleBasedRender requiredRoles={ ['Администратор', 'Потребитель'] } >
               <li><NavLink className="link" activeClassName="active-link" to="/ready">Готовность</NavLink></li>
             </RoleBasedRender>
-            <RoleBasedRender requiredRoles={ ['Потребитель'] } >
-              <li><NavLink className="link" activeClassName="active-link" to="/ready-object">Готовность</NavLink></li>
-            </RoleBasedRender>
+            {/*<RoleBasedRender requiredRoles={ ['Потребитель'] } >*/}
+            {/*  <li><NavLink className="link" activeClassName="active-link" to="/ready-object">Готовность</NavLink></li>*/}
+            {/*</RoleBasedRender>*/}
           <li><NavLink className="link" activeClassName="active-link" to="/dr-events">DR-события</NavLink></li>
           {/* <RoleBasedRender requiredRoles={ ['Клиент'] } > */}
             {/* <li><NavLink className="link" activeClassName="active-link" to="/permissions">Документы</NavLink></li> */}
