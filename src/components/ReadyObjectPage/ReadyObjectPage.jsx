@@ -55,7 +55,7 @@ function ReadyPage({ history, match }) {
         <div className="regular-text">Статус на 24 ноября</div>
         <div className='flex-row'>
           <div className="balance-value">Готов</div>
-          <button className='primary-button' onClick={() => childRef.current.showModal()}>Уведомить о неготовности</button>
+          <button className='primary-button' onClick={() => childRef.current.showModal()}>Изменить статус готовности</button>
         </div>
         <Tab menu={{ secondary: true, pointing: true }} panes={panes}/>
       </RoleBasedRender>
