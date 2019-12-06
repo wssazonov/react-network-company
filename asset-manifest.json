@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/react-network-company/static/css/main.729044a1.chunk.css",
-    "main.js": "/react-network-company/static/js/main.e76d1fa7.chunk.js",
-    "main.js.map": "/react-network-company/static/js/main.e76d1fa7.chunk.js.map",
+    "main.css": "/react-network-company/static/css/main.00d9cd7f.chunk.css",
+    "main.js": "/react-network-company/static/js/main.75632c44.chunk.js",
+    "main.js.map": "/react-network-company/static/js/main.75632c44.chunk.js.map",
     "runtime-main.js": "/react-network-company/static/js/runtime-main.e4000666.js",
     "runtime-main.js.map": "/react-network-company/static/js/runtime-main.e4000666.js.map",
     "static/css/2.46cdc163.chunk.css": "/react-network-company/static/css/2.46cdc163.chunk.css",
-    "static/js/2.fb95b0c5.chunk.js": "/react-network-company/static/js/2.fb95b0c5.chunk.js",
-    "static/js/2.fb95b0c5.chunk.js.map": "/react-network-company/static/js/2.fb95b0c5.chunk.js.map",
+    "static/js/2.9f7176fd.chunk.js": "/react-network-company/static/js/2.9f7176fd.chunk.js",
+    "static/js/2.9f7176fd.chunk.js.map": "/react-network-company/static/js/2.9f7176fd.chunk.js.map",
     "index.html": "/react-network-company/index.html",
-    "precache-manifest.861dcc48ecadb793f87bd1024c36a31c.js": "/react-network-company/precache-manifest.861dcc48ecadb793f87bd1024c36a31c.js",
+    "precache-manifest.4e080e2f2ee19223dbf29a13b5165f63.js": "/react-network-company/precache-manifest.4e080e2f2ee19223dbf29a13b5165f63.js",
     "service-worker.js": "/react-network-company/service-worker.js",
     "static/css/2.46cdc163.chunk.css.map": "/react-network-company/static/css/2.46cdc163.chunk.css.map",
-    "static/css/main.729044a1.chunk.css.map": "/react-network-company/static/css/main.729044a1.chunk.css.map",
+    "static/css/main.00d9cd7f.chunk.css.map": "/react-network-company/static/css/main.00d9cd7f.chunk.css.map",
     "static/media/bell.svg": "/react-network-company/static/media/bell.69e6217a.svg",
-    "static/media/headerLogo.svg": "/react-network-company/static/media/headerLogo.1ae9b68b.svg",
     "static/media/logo.svg": "/react-network-company/static/media/logo.8ac90c27.svg",
     "static/media/unfold-icon.svg": "/react-network-company/static/media/unfold-icon.aa3be005.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e4000666.js",
     "static/css/2.46cdc163.chunk.css",
-    "static/js/2.fb95b0c5.chunk.js",
-    "static/css/main.729044a1.chunk.css",
-    "static/js/main.e76d1fa7.chunk.js"
+    "static/js/2.9f7176fd.chunk.js",
+    "static/css/main.00d9cd7f.chunk.css",
+    "static/js/main.75632c44.chunk.js"
   ]
 }
