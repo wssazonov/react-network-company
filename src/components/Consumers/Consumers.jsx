@@ -58,6 +58,11 @@ function Consumers() {
     history.push(`/consumers/${id}`);
   };
 
+  const deleteItem = (item, event) => {
+    event.stopPropagation();
+    setConsumers(consumers.filter(x => x.id !== item.id));
+  }
+
   return (
     <div className="page-content">
       <div className="header-block">
@@ -83,6 +88,7 @@ function Consumers() {
           <th>Способ определения объема</th>
           <th>Статус</th>
           <th>Выбран для скачивания</th>
+          <th/>
         </tr>
         </thead>
         <tbody>
@@ -115,6 +121,9 @@ function Consumers() {
                 disableRipple={true}
                 className="custom-checkbox"
               />
+            </td>
+            <td>
+              <button onClick={(event) => deleteItem(item, event)} className="delete-button secondary-button">Удалить</button>
             </td>
           </tr>
         ))}

@@ -37,6 +37,13 @@
       display: block;
     }
   }
+  tr:hover {
+    td:last-child {
+      .delete-button {
+        display: block;
+      }
+    }
+  }
   .zero-value {
     color: rgba(0, 0, 0, 0.4);
   }
@@ -73,4 +80,8 @@
   max-width: 50px;
   overflow-x: visible;
   white-space: nowrap;
+}
+
+.delete-button {
+  display: none;
 }
