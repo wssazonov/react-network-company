@@ -9,6 +9,7 @@ function DocumentsInfoTable({ documents, onRowClick, onDelete }) {
   const columns = [
     { title: 'Дата', format: date => formatDate(date) },
     { title: 'Потребитель' },
+    { title: 'Прибор учета' },
     { title: 'Документ' },
     { title: 'Статус', styles: { style: { color: '#8AB65A' }, condition: value => value === 'Отправлен'}}
   ];

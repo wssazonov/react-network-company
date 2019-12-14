@@ -90,6 +90,7 @@ function ReadyPage({ history, match }) {
           <button className='primary-button' onClick={ handleSubmit }>Скачать макет Availability</button>
           <p>После скачивания вы сможете их подписать, <br /> а потом загрузить <span> в раздел Документы → Готовность</span></p>
         </div>
+        <button className='primary-button' onClick={ handleSubmit }>Скачать макет за период</button>
       </RoleBasedRender>
       <SentReadyModal ref={childRef}/>
     </div>

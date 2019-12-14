@@ -78,7 +78,7 @@ function Consumers() {
         <tr>
           <th>Потребитель</th>
           <th>Объект</th>
-          <th>Объём снижения <span className="units">МВт·ч</span></th>
+          <th>Объём снижения <span className="units">кВт</span></th>
           <th>Длительность снижения</th>
           <th>Способ определения объема</th>
           <th>Статус</th>
@@ -103,7 +103,7 @@ function Consumers() {
             <td>{ item.duration } ч.</td>
             <td>{ item.method }</td>
             <td className={ (item.status ? "active" : "not-active") + ' button-status'}>
-              { item.status ? "Активный" : "Неактивный" }
+              { item.status ? "Активен" : "Не активен" }
               <div className="activate-button" onClick={(event) => toggleStatus(item, event)}>{ item.status ? "Деактивировать" : "Активировать" }</div>
             </td>
             <td>
@@ -120,7 +120,7 @@ function Consumers() {
         ))}
         </tbody>
       </table>
-      <button className="download-button primary-button">Скачать анкету по выбранным потребителям</button>
+      <button className="download-button primary-button">Скачать данные о ПУ выбранных потребителей</button>
     </div>
   );
 }

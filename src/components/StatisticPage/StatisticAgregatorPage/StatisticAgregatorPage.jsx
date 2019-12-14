@@ -53,7 +53,7 @@ function StatisticAgregatorPage({ history, match }) {
         <button className='primary-button' onClick={ handleSubmit }>Скачать макеты 80020</button>
         <p>После скачивания вы сможете их подписать, <br /> а потом загрузить <span> в раздел Документы</span></p>
       </div>
-      <button className='secondary-button' onClick={ resetChanges }>Скачать отчёт о ПУ с нулевыми показателями</button>
+      {/* <button className='secondary-button' onClick={ resetChanges }>Скачать отчёт о ПУ с нулевыми показателями</button> */}
     </div>
   );
 }

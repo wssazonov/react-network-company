@@ -4,7 +4,7 @@ import Table from '../../../Table/Table';
 function StatisticObjectTable({ objects, onRowClick, onDelete }) {
   const columns = [
     { title: 'Потребитель' },
-    { title: 'Потребление' },
+    { title: 'Потребление, МВт·ч' },
     { title: 'Готовность' },
     { title: 'Выполнение' }
   ];

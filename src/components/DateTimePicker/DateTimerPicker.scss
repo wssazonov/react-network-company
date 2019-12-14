@@ -1,0 +1,105 @@
+.date-time-picker {
+
+  &__input {
+    height: 32px;
+    font-size: 15px;
+    width: 150px;
+    box-sizing: border-box;
+    padding: 0 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &__popper {
+    z-index: 3;
+  }
+}
+
+.react-datepicker {
+  font-family: "Ubuntu Mono", Helvetica, Arial, sans-serif;
+  border: none;
+
+  &__header {
+    text-align: center;
+    background-color: transparent;
+    border-bottom: none;
+    padding-top: 8px;
+    position: relative;
+  }
+
+  &__day-names {
+    padding-top: 16px;
+
+    & > :nth-of-type(n + 6) {
+      color: rgba(250, 44, 36, 0.8);
+    }
+
+    & > :nth-of-type(-n + 5) {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__day-name {
+    text-transform: capitalize;
+    width: 1.7rem;
+  }
+
+  &__current-month {
+    text-transform: capitalize;
+  }
+
+  &__month {
+    &--selected, &-selected {
+      background-color: rgba(26, 165, 184, .4);
+      color: rgba(0, 0, 0, 0.8);
+      &:hover {
+        background-color: rgba(26, 165, 184, .2) !important;
+      }
+    }
+
+    &--in-range {
+      background-color: rgba(26, 165, 184, .4);
+      color: rgba(0, 0, 0, 0.8)
+    }
+
+    &--in-selecting-range {
+      background-color: rgba(26, 165, 184, .2);
+      mix-blend-mode: darken;
+      color: rgba(0, 0, 0, 0.8);
+
+      &:hover {
+        background-color: rgba(26, 165, 184, .4);
+        mix-blend-mode: darken;
+        color: rgba(0, 0, 0, 0.8)
+      }
+    }
+  }
+
+  &__day {
+    width: 1.7rem;
+
+    &--selected {
+      background-color: rgba(26, 165, 184, .4);
+      color: rgba(0, 0, 0, 0.8);
+      &:hover {
+        background-color: rgba(26, 165, 184, .2) !important;
+      }
+    }
+
+    &--in-range {
+      background-color: rgba(26, 165, 184, .4);
+      color: rgba(0, 0, 0, 0.8)
+    }
+
+    &--in-selecting-range {
+      background-color: transparent;
+      mix-blend-mode: darken;
+      color: rgba(0, 0, 0, 0.8);
+
+      &:hover {
+        background-color: rgba(26, 165, 184, .4);
+        mix-blend-mode: darken;
+        color: rgba(0, 0, 0, 0.8)
+      }
+    }
+  }
+}

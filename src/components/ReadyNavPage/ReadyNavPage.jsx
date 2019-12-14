@@ -31,7 +31,7 @@ function ReadyNavPage() {
             }
           </div>
 
-          <div className="page-content">
+          <div className="">
             <Route path={'/ready'} exact={true} component={ReadyPage}/>
             <Route path={'/ready/:objectId'} exact={true} component={ReadyObjectPage}/>
           </div>

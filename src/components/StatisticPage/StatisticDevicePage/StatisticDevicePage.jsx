@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
+import DateTimePicker from '../../DateTimePicker/DateTimePicker';
 import './StatisticDevicePage.scss';
 import StatisticDeviceTable from './StatisticDeviceTable/StatisticDeviceTable';
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
@@ -43,9 +44,18 @@ function StatisticDevicePage({ history, match }) {
           icon='angle down'
           options={ dateFilterOptions }
         />
+        <DateTimePicker />
       </div>
-      <div className="regular-text">Поотребление</div>
-      <div className="balance-value">500000 кВт·ч</div>
+      <div className='flex-row'>
+        <div>
+          <div className="regular-text">Поотребление</div>
+          <div className="balance-value">500000 кВт·ч</div>
+        </div>
+        <div className="method-calc">
+          <div className="regular-text">Способ определения объёма потребления</div>
+          <div className="balance-value">Приём</div>
+        </div>
+      </div>
       <StatisticDeviceTable 
         objects={ mockInfo } 
         onRowClick={ handleRowClick } 

@@ -4,7 +4,7 @@ import Table from '../../../Table/Table';
 function StatisticDeviceTable({ objects, onRowClick, onDelete }) {
   const columns = [
     { title: 'Период' },
-    { title: 'Потребление' }
+    { title: 'Потребление, кВт·ч' }
   ];
 
   return (

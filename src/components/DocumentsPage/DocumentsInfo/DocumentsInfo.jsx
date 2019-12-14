@@ -4,14 +4,14 @@ import DocumentsInfoTable from './DocumentsInfoTable/DocumentsInfoTable';
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
 ];
 
 const mockInfo2 = [

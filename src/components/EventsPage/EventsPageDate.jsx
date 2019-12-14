@@ -58,32 +58,26 @@ function EventsPageNow() {
       <div className="header-object">
         <h1>События</h1>
         <span> → 15.01.2019</span>
+        <span> → Объект 1</span>
       </div>
       <div className='flex-row'>
-        <Dropdown
-          defaultValue={VIEW_OPTIONS[0].value}
-          fluid
-          className="app-dropdown-button date-range-selector small-input dropdown-margin"
-          selection
-          icon='angle down'
-          onChange={ handleViewOptionChange }
-          options={ VIEW_OPTIONS }
-        />
+        <div>
+          <div className="regular-text">Время события</div>
+          <div className="balance-value">17:00 - 21:00</div>
+        </div>
+        <div className="method-calc">
+          <div className="regular-text">Статус</div>
+          <div className="balance-value">Успешно</div>
+        </div>
       </div>
-      <div className="regular-text">Время события</div>
-      <div className="balance-value">17:00 - 21:00</div>
       <table className="table events-table">
         <thead>
           <tr>
-            <th>Объект</th>
             <th>Потребитель</th>
-            <th>Способ рассчета</th>
-            <th className="wide-cell">Снижение <span>кВт·ч</span></th>
+            <th className="wide-cell">Снижение <span>кВт</span></th>
             <th>Статус</th>
           </tr>
           <tr>
-            <th/>
-            <th/>
             <th/>
             <th className="wide-cell">
               <div className="participants-count">
@@ -96,9 +90,7 @@ function EventsPageNow() {
         </thead>
         <tbody>
         <tr className="sub-header">
-          <td/>
           <td>Сумма</td>
-          <td/>
           <td>
             <div className="participants-count">
               <div>{ valueSum1 }</div>
@@ -109,9 +101,7 @@ function EventsPageNow() {
         </tr>
         { events.map((item, index) => (
           <tr key={index} onClick={() => rowClicked(item.id)}>
-            <td>{ item.object }</td>
             <td>{ item.user }</td>
-            <td >{ item.method }</td>
             <td>
               <div className="participants-count">
                 <div className={item.countPlan === 0 ? "zero-value" : ""}>{ item.countPlan }</div>
@@ -125,13 +115,13 @@ function EventsPageNow() {
         ))}
         </tbody>
       </table>
-      <div className="downloadActs">
+      {/* <div className="downloadActs">
         <p>Скачать акты</p>
         <p><span>оказания услуг Агрегатор-Потребитель</span></p>
         <p><span>оказания услуг Агрегатор-СО</span></p>
         <p><span>о фактическом объеме оказанных Агрегатором услуг</span></p>
 
-      </div>
+      </div> */}
     </div>
   );
 }

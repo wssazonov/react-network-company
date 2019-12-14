@@ -5,10 +5,10 @@ import StatisticUserTable from './StatisticUserTable/StatisticUserTable';
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
-  { device: 'Прибор учета 1', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40 },
-  { device: 'Прибор учета 2', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40 },
-  { device: 'Прибор учета 3', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40 },
-  { device: 'Прибор учета 4', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40 },
+  { device: 'Прибор учета 1', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40, method: 'Прием' },
+  { device: 'Прибор учета 2', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40, method: 'Отдача' },
+  { device: 'Прибор учета 3', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40, method: 'Прием' },
+  { device: 'Прибор учета 4', deviceNumber: 340000102, address: 'Мясницкая 19, 3 эт.', pointCode: 340000102, readiness: 40, method: 'Отдача' },
 ];
 
 const dateFilterOptions = [
@@ -63,6 +63,7 @@ function StatisticUserPage({ history, match }) {
       <div className='app-button-group statistic-buttons'>
         <button className='primary-button' onClick={ handleSubmit }>Скачать макеты 80020</button>
         <p>После скачивания вы сможете их подписать, <br /> а потом загрузить <span> в раздел Документы</span></p>
+        <button className='primary-button flex-row'>Загрузить данные из файла</button>
       </div>
     </div>
   );

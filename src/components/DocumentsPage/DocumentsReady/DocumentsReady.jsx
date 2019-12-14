@@ -5,14 +5,14 @@ import UploadMaketModal from "../../modals/UploadMaket/UploadMaketModal";
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Объект №1', document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
 ];
 
 const mockInfo2 = [
@@ -37,14 +37,6 @@ const dateFilterOptions = [
     text: '1 сентября 2019 - 1 октября 2019',
     value: '1 сентября 2019 - 1 октября 2019',
   },
-];
-
-const objectsOptions = [
-  {
-    key: 'Все объекты',
-    text: 'Все объекты',
-    value: 'Все объекты',
-  }
 ];
 
 const statusOptions = [
@@ -74,16 +66,6 @@ function DocumentsReady() {
     <div>
       <div className='flex-row space'>
         <div className='flex-row'>
-          <RoleBasedRender requiredRoles={ ['Администратор'] } >
-            <Dropdown
-              defaultValue='Все объекты'
-              fluid
-              className="app-dropdown-button date-range-selector small-input dropdown-margin"
-              selection
-              icon='angle down'
-              options={ objectsOptions }
-            />
-          </RoleBasedRender>
           <Dropdown
             defaultValue='1 января 2019 - 1 сентября 2019'
             fluid

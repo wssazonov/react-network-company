@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {useHistory, useParams} from "react-router-dom";
 import Table from '../Table/Table'
 import {Dropdown} from "semantic-ui-react";
@@ -81,23 +81,46 @@ const CHANNEL_OPTIONS = [
 
 const ENERGY_TRANSFER_OPTIONS = [
   {
-    key: 'Передача',
-    text: 'Передача',
-    value: 'Передача',
+    key: 'Прием',
+    text: 'Прием',
+    value: 'Прием',
   },
   {
-    key: 'Не передача',
-    text: 'Не передача',
-    value: 'Не передача',
+    key: 'Отдача',
+    text: 'Отдача',
+    value: 'Отдача',
   }
 ];
 
-
+const VIEW_OPTIONS = [
+  {
+    key: 'Все объекты',
+    text: 'Все объекты',
+    value: 'Все объекты',
+  },
+  {
+    key: 'Объект 1',
+    text: 'Объект 1',
+    value: 'Объект 1',
+  },
+  {
+    key: 'Объект 2',
+    text: 'Объект 2',
+    value: 'Объект 2',
+  },
+  {
+    key: 'Объект 3',
+    text: 'Объект 3',
+    value: 'Объект 3',
+  }
+];
 
 function ConsumerInfoPage(props) {
 
   const {consumerId} = useParams();
   const history = useHistory();
+  const [viewOption, setViewOption] = useState([VIEW_OPTIONS[0].value]);
+  const handleViewOptionChange = (event, { value }) => setViewOption(value);
 
   return (
     <div className="page-content consumer-profile">
@@ -140,6 +163,16 @@ function ConsumerInfoPage(props) {
           <button className='secondary-button hidden'>Добавить</button>
         </div>
 
+        <Dropdown
+          defaultValue={VIEW_OPTIONS[0].value}
+          fluid
+          className="small-input app-dropdown-button"
+          selection
+          icon='angle down'
+          onChange={ handleViewOptionChange }
+          options={ VIEW_OPTIONS }
+        />
+
         <div className="app-input-group">
           <div className="group-title"><a name="consumer-name">Наименование</a></div>
           <div className='app-input medium-input-dropdown'>
@@ -180,6 +213,10 @@ function ConsumerInfoPage(props) {
               <input value="100" />
               <span className="uom">МВт</span>
             </div>
+          </div>
+          <div className='app-input wide-input'>
+            <label>Цена, руб</label>
+            <input value='500'/>
           </div>
           <div className='app-input tiny-input-uom'>
             <label>Индикативная длительность снижения потребления</label>
@@ -386,6 +423,8 @@ function ConsumerInfoPage(props) {
           <button className='secondary-button hidden'>Добавить</button>
         </div>
 
+        <button className='primary-button flex-row'>Загрузить данные о ПУ из файла</button>
+
         <div className="app-input-group">
           <div className="group-title">
             <a name="tools-1"><span>Прибор учёта ЭАО «Потребитель 1»</span></a>
@@ -481,10 +520,10 @@ function ConsumerInfoPage(props) {
             <label>Телефон мобильный</label>
             <input value="+7 905 123-45-67"/>
           </div>
-          <div className='app-input medium-input-dropdown'>
+          {/* <div className='app-input medium-input-dropdown'>
             <label>Номер сертификата электронной подписи</label>
             <input value="30AE FD63 0000 0000 0619"/>
-          </div>
+          </div> */}
           <div className='app-input large-input'>
             <label>Удостоверяющий центр</label>
             <input value="Администратор торговой системы оптового рынка эле"/>

@@ -4,14 +4,14 @@ import DocumentsConsumptionTable from './DocumentsConsumptionTable/DocumentsCons
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
 ];
 
 const mockInfo2 = [

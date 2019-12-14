@@ -20,6 +20,10 @@ function ReadyTable({ objects, onRowClick, onDelete }) {
     { title: 'Готовность' }
   ];
 
+  const actions = [
+    <button className={ 'secondary-button hidden' } onClick={ onDelete }>Изменить статус готовности</button>
+  ];
+
   return (
     <div className="table-ready">
       <RoleBasedRender requiredRoles={ ['Администратор'] } >
@@ -28,6 +32,7 @@ function ReadyTable({ objects, onRowClick, onDelete }) {
           data={ objects } 
           onDelete= { onDelete }
           onRowClick={ onRowClick }
+          actions={ actions } 
         />
       </RoleBasedRender>
       <RoleBasedRender requiredRoles={ ['Потребитель'] } >

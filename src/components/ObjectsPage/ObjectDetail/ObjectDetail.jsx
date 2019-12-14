@@ -106,6 +106,10 @@ function ObjectDetail({ object, onSubmit}) {
           <label>Гарантирующий поставщик</label>
           <input value='РосКабель'/>
         </div>
+        <div className='app-input wide-input'>
+          <label>Цена, руб</label>
+          <input value='500'/>
+        </div>
       </div>
       
       <div className='app-button-group'>

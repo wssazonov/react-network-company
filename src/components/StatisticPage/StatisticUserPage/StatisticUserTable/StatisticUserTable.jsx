@@ -7,7 +7,8 @@ function StatisticUserTable({ objects, onRowClick, onDelete }) {
     { title: 'Заводской номер' },
     { title: 'Место расположения' },
     { title: 'Код точки измерения' },
-    { title: 'Потребление' }
+    { title: 'Потребление' },
+    { title: 'Способ' }
   ];
 
 

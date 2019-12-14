@@ -8,6 +8,7 @@ function DocumentsConsumptionTable({ documents, onRowClick, onDelete }) {
   const childRef = useRef();
   const columns = [
     { title: 'Дата', format: date => formatDate(date) },
+    { title: 'Объект' },
     { title: 'Потребитель' },
     { title: 'Документ' },
     { title: 'Статус', styles: { style: { color: '#8AB65A' }, condition: value => value === 'Отправлен'}}

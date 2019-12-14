@@ -4,7 +4,7 @@ import Table from '../../../Table/Table';
 function StatisticAgregatorTable({ objects, onRowClick, onDelete }) {
   const columns = [
     { title: 'Объект' },
-    { title: 'Потребление' },
+    { title: 'Потребление, МВт·ч' },
     { title: 'Готовность' },
     { title: 'Выполнение' }
   ];
