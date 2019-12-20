@@ -45,7 +45,7 @@ const options1 = {
   },
   yAxis: {
     title: {
-      text: ""
+      text: "МВт·ч"
     },
     labels: {
       enabled: true,
