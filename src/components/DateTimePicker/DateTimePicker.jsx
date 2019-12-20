@@ -1,24 +1,15 @@
 import React from "react";
-import DatePicker, { registerLocale, ReactDatePickerProps } from "react-datepicker";
-import ru from "date-fns/locale/ru";
-import "react-datepicker/dist/react-datepicker.css";
-// import './DateTimePicker.scss';
+import { formatDate } from '../../utils';
+import SemanticDatepicker from 'react-semantic-ui-datepickers';
+import 'react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css';
+import './DateTimerPicker.scss';
 
-registerLocale("ru", ru);
+
 function DateTimePicker () {
   return (
-    <DatePicker
-      locale="ru"
-      className={"date-time-picker__input"}
-      popperClassName={"date-time-picker__popper"}
-      dateFormat="dd.MM.yyyy"
-      dayClassName={(date) => {
-        if (new Date(date).getDay() === 0 || new Date(date).getDay() === 6) {
-          return "weekend";
-        }
-        return "working";
-      }}
-    />
+    <div className="datePicker">
+      <SemanticDatepicker locale="ru-RU" clearable={false} icon="angle down icon" type="range" format="DD-MM-YYYY"/>
+    </div>
   )
 
 };

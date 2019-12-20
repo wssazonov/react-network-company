@@ -1,8 +1,10 @@
 import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import './StatisticObjectPage.scss';
+import DateTimePicker from '../../DateTimePicker/DateTimePicker';
 import StatisticObjectTable from './StatisticObjectTable/StatisticObjectTable';
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
+import PickChart from '../../pickChart/PickChart';
 
 const mockInfo = [
   { object: 'Объект 1', readiness: 50, consumption: '10%', rendering: '23%' },
@@ -35,14 +37,15 @@ function StatisticObjectPage({ history, match }) {
         <h1>Статистика <span>Объект 1</span></h1>
       </div>
       <div className='flex-row'>
-        <Dropdown
+        {/* <Dropdown
           defaultValue='1 января 2019 - 1 сентября 2019'
           fluid
           className="app-dropdown-button date-range-selector dropdown-margin"
           selection
           icon='angle down'
           options={ dateFilterOptions }
-        />
+        /> */}
+        <DateTimePicker />
       </div>
       <div className="regular-text">Полное потребление</div>
       <div className="balance-value">64,02 МВт·ч</div>
@@ -55,6 +58,7 @@ function StatisticObjectPage({ history, match }) {
         <button className='primary-button' onClick={ handleSubmit }>Скачать макеты 80020</button>
         <p>После скачивания вы сможете их подписать, <br /> а потом загрузить <span> в раздел Документы</span></p>
       </div>
+      <PickChart />
       {/* <button className='secondary-button' onClick={ resetChanges }>Скачать отчёт о ПУ с нулевыми показателями</button> */}
     </div>
   );

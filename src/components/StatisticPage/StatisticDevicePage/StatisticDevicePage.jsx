@@ -36,14 +36,14 @@ function StatisticDevicePage({ history, match }) {
         <h1>Статистика <span>Прибор учёта 1</span></h1>
       </div>
       <div className='flex-row'>
-        <Dropdown
+        {/* <Dropdown
           defaultValue='1 января 2019 - 1 сентября 2019'
           fluid
           className="app-dropdown-button date-range-selector dropdown-margin"
           selection
           icon='angle down'
           options={ dateFilterOptions }
-        />
+        /> */}
         <DateTimePicker />
       </div>
       <div className='flex-row'>

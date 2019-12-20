@@ -1,105 +1,33 @@
-.date-time-picker {
-
-  &__input {
-    height: 32px;
-    font-size: 15px;
-    width: 150px;
-    box-sizing: border-box;
-    padding: 0 8px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-  }
-
-  &__popper {
-    z-index: 3;
-  }
-}
-
-.react-datepicker {
-  font-family: "Ubuntu Mono", Helvetica, Arial, sans-serif;
-  border: none;
-
-  &__header {
-    text-align: center;
-    background-color: transparent;
-    border-bottom: none;
-    padding-top: 8px;
-    position: relative;
-  }
-
-  &__day-names {
-    padding-top: 16px;
-
-    & > :nth-of-type(n + 6) {
-      color: rgba(250, 44, 36, 0.8);
+.datePicker {
+  color: #1AA5B8;
+  .field {
+    .ui.segment {
+      box-shadow: 0 1px 2px 0 rgba(34,36,38,.15) !important;
+      padding: 1em 1em;
+      border: 1px solid rgba(34,36,38,.15) !important;
     }
-
-    & > :nth-of-type(-n + 5) {
-      color: rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  &__day-name {
-    text-transform: capitalize;
-    width: 1.7rem;
-  }
-
-  &__current-month {
-    text-transform: capitalize;
-  }
-
-  &__month {
-    &--selected, &-selected {
-      background-color: rgba(26, 165, 184, .4);
-      color: rgba(0, 0, 0, 0.8);
-      &:hover {
-        background-color: rgba(26, 165, 184, .2) !important;
+    .field {
+      .ui {
+        width: 300px !important;
+        input {
+          color: #1AA5B8;
+          border: 1px solid #1AA5B8 !important;
+          border-radius: 4px !important;
+          font-family: Ubuntu Mono;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 16px;
+        }
+        input::placeholder {
+          color: #1AA5B8 !important;
+        }
+        i {
+          color: #1AA5B8 !important;
+          opacity: unset !important;
+        }
       }
-    }
 
-    &--in-range {
-      background-color: rgba(26, 165, 184, .4);
-      color: rgba(0, 0, 0, 0.8)
-    }
-
-    &--in-selecting-range {
-      background-color: rgba(26, 165, 184, .2);
-      mix-blend-mode: darken;
-      color: rgba(0, 0, 0, 0.8);
-
-      &:hover {
-        background-color: rgba(26, 165, 184, .4);
-        mix-blend-mode: darken;
-        color: rgba(0, 0, 0, 0.8)
-      }
-    }
-  }
-
-  &__day {
-    width: 1.7rem;
-
-    &--selected {
-      background-color: rgba(26, 165, 184, .4);
-      color: rgba(0, 0, 0, 0.8);
-      &:hover {
-        background-color: rgba(26, 165, 184, .2) !important;
-      }
-    }
-
-    &--in-range {
-      background-color: rgba(26, 165, 184, .4);
-      color: rgba(0, 0, 0, 0.8)
-    }
-
-    &--in-selecting-range {
-      background-color: transparent;
-      mix-blend-mode: darken;
-      color: rgba(0, 0, 0, 0.8);
-
-      &:hover {
-        background-color: rgba(26, 165, 184, .4);
-        mix-blend-mode: darken;
-        color: rgba(0, 0, 0, 0.8)
-      }
     }
   }
 }
