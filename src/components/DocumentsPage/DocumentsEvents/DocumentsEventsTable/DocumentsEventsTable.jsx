@@ -12,14 +12,14 @@ function DocumentsEventsTable({ documents, onRowClick, onDelete }) {
 
   return (
     <div>
-      <RoleBasedRender requiredRoles={ ['Администратор'] } >
+      {/* <RoleBasedRender requiredRoles={ ['Администратор'] } > */}
         <Table 
           columns={ columns } 
           data={ documents } 
           onDelete= { onDelete }
           onRowClick={ onRowClick }
         />
-      </RoleBasedRender>
+      {/* </RoleBasedRender> */}
     </div>
   );
 }

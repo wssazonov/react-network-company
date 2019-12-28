@@ -131,247 +131,60 @@ function SettingsPage() {
       </div> */}
 
       <div className="app-input-group">
-        <div className="group-title"><a name="consumer-name">Наименование</a></div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Сокращенное</label>
-          <input value="Потребитель 1"/>
+      <div className="header-block">
+          <a name="users"><h1>Пользователи</h1></a>
+          <button className='secondary-button hidden'>Добавить</button>
         </div>
-        <div className='app-input wide-input'>
-          <label>Полное</label>
-          <input value="АО «Потребитель 1»" />
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>ID</label>
-          <input value="Потребитель 1"/>
-        </div>
-        <div className='app-input wide-input'>
-          <label>Назначение</label>
-          <input value="АО «Потребитель 1»" />
-        </div>
-      </div>
 
-      <div className="app-input-group">
-        <div className="group-title"><a name="consumer-title">Договор</a></div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Номер</label>
-          <input value="Потребитель 1"/>
-        </div>
-        <div className='app-input tiny-input'>
-          <label>Дата</label>
-          <input value="10.10.2018" />
-        </div>
-        <div className='app-input tiny-input'>
-          <label>Период действия</label>
-          <input value="10.10.2020"/>
-        </div>
-        <div className='app-input tiny-input-uom'>
-          <label>Индикативный объем снижения потребления</label>
-          <div className="with-uom">
-            <input value="100" />
-            <span className="uom">МВт</span>
+        <div className="app-input-group">
+          <div className="group-title">
+            <a name="users-1"><span>Никаев Филимон Евлампиевич</span></a>
+            <button className='secondary-button hidden'>Удалить</button>
           </div>
-        </div>
-        <div className='app-input wide-input'>
-          <label>Цена, руб</label>
-          <input value='500'/>
-        </div>
-        <div className='app-input tiny-input-uom'>
-          <label>Индикативная длительность снижения потребления</label>
-          <div className="with-uom">
-            <input value="120" />
-            <span className="uom">мин.</span>
+          <div className='app-input medium-input-dropdown'>
+            <label>Фамилия</label>
+            <input value="Никаев"/>
           </div>
-        </div>
-        <div className='app-input medium-input'>
-          <label>Метод определения объема оказанных услуг</label>
-          <Dropdown
-            defaultValue={ LOAD_OPTIONS[0].value }
-            fluid
-            className="time-input app-dropdown-button"
-            selection
-            icon='angle down'
-            options={ LOAD_OPTIONS }
-          />
-        </div>
-        <div className='app-input extra-wide-input'>
-          <label>Подстройка графика базовой нагрузки</label>
-          <Dropdown
-            defaultValue={ LOAD_CALIBRATION_OPTIONS[0].value }
-            fluid
-            className="time-input app-dropdown-button"
-            selection
-            icon='angle down'
-            options={ LOAD_CALIBRATION_OPTIONS }
-          />
-        </div>
-        <div className='app-input tiny-input-uom'>
-          <label>Максимальная базовая нагрузка</label>
-          <div className="with-uom">
-            <input value="100" />
-            <span className="uom">МВт</span>
+          <div className='app-input medium-input-dropdown'>
+            <label>Имя</label>
+            <input value="Филимон"/>
           </div>
-        </div>
-        <div className='app-input large-input'>
-          <label>Объекты по производству электрической энергии</label>
-          <input value="" />
-        </div>
-        <div className='app-input large-input'>
-          <label>Способ определения объема потребленной электрической энергии энергопринимающим устройством (расчетная схема)</label>
-          <input value="" />
-        </div>
-      </div>
-
-      <div className="app-input-group">
-        <div className="group-title"><a name="consumer-address">Юридический адрес</a></div>
-        <div className='app-input extra-tiny-input'>
-          <label>Почтовый индекс</label>
-          <input value="740004" />
-        </div>
-        <div className='app-input medium-input'>
-          <label>Субъект Российской Федерации</label>
-          <Dropdown
-            defaultValue={ ADDRESS_REGION[0].value }
-            fluid
-            className="time-input app-dropdown-button"
-            selection
-            icon='angle down'
-            options={ ADDRESS_REGION }
-          />
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Город</label>
-          <input value="Москва"/>
-        </div>
-      </div>
-      <div className='app-input large-input'>
-        <label>Улица</label>
-        <input value="Волгоградский проспект"/>
-      </div>
-      <div className="address-row">
-        <div className='app-input'>
-          <label>Дом</label>
-          <input value="1" />
-        </div>
-        <div className='app-input'>
-          <label>Корпус</label>
-          <input value="1а" />
-        </div>
-      </div>
-
-      <div className="app-input-group">
-        <div className="group-title"><a name="consumer-real-address">Адрес места нахождения</a></div>
-        <div className='app-input extra-tiny-input'>
-          <label>Почтовый индекс</label>
-          <input value="740004" />
-        </div>
-        <div className='app-input medium-input'>
-          <label>Субъект Российской Федерации</label>
-          <Dropdown
-            defaultValue={ ADDRESS_REGION[0].value }
-            fluid
-            className="time-input app-dropdown-button"
-            selection
-            icon='angle down'
-            options={ ADDRESS_REGION }
-          />
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Город</label>
-          <input value="Москва"/>
-        </div>
-        <div className='app-input large-input'>
-          <label>Улица</label>
-          <input value="Волгоградский проспект"/>
-        </div>
-      </div>
-      <div className="address-row">
-        <div className='app-input'>
-          <label>Дом</label>
-          <input value="1" />
-        </div>
-        <div className='app-input'>
-          <label>Корпус</label>
-          <input value="1а" />
-        </div>
-      </div>
-
-      <div className="app-input-group">
-        <div className="group-title"><a name="consumer-abbrev">Реквизиты</a></div>
-        <div className='app-input medium-input-dropdown'>
-          <label>ИНН</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>КПП</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>ОГРН</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>ОКПО</label>
-          <input value=""/>
-        </div>
-      </div>
-
-      <div className="app-input-group">
-        <div className="group-title"><a name="consumer-bank">Банковские реквизиты</a></div>
-        <div className='app-input large-input'>
-          <label>Наименование банка</label>
-          <input value=""/>
-        </div>
-        <div className='app-input tiny-input-uom'>
-          <label>БИК банка</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Корреспондентский счет</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Расчетный счет</label>
-          <input value=""/>
-        </div>
-        <div className='app-input large-input'>
-          <label>Адрес банка</label>
-          <input value=""/>
-        </div>
-      </div>
-
-      <div className="app-input-group">
-        <div className="group-title"><a name="consumer-mail">Электронная почта</a></div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Основная</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Дополнительная</label>
-          <input value=""/>
-        </div>
-      </div>
-
-      <div className="app-input-group">
-        <div className="group-title"><a name="consumer-contact">Контактное лицо</a></div>
-        <div className='app-input large-input'>
-          <label>ФИО</label>
-          <input value=""/>
-        </div>
-        <div className='app-input large-input'>
-          <label>Должность</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Электронная почта</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Телефон рабочий</label>
-          <input value=""/>
-        </div>
-        <div className='app-input medium-input-dropdown'>
-          <label>Телефон мобильный</label>
-          <input value=""/>
+          <div className='app-input medium-input-dropdown'>
+            <label>Отчество</label>
+            <input value="Евлампиевич"/>
+          </div>
+          <div className='app-input medium-input-dropdown'>
+            <label>Должность</label>
+            <input value="Оператор"/>
+          </div>
+          <div className='app-input medium-input'>
+            <label>Электронная почта</label>
+            <input value="mfburgo@outlook.com"/>
+          </div>
+          <div className='app-input small-input'>
+            <label>Телефон рабочий</label>
+            <input value="8442 182 122"/>
+          </div>
+          <div className='app-input small-input'>
+            <label>Телефон мобильный</label>
+            <input value="+7 905 123-45-67"/>
+          </div>
+          {/* <div className='app-input medium-input-dropdown'>
+            <label>Номер сертификата электронной подписи</label>
+            <input value="30AE FD63 0000 0000 0619"/>
+          </div> */}
+          <div className='app-input large-input'>
+            <label>Удостоверяющий центр</label>
+            <input value="Администратор торговой системы оптового рынка эле"/>
+          </div>
+          <div className='app-input small-input'>
+            <label>Пароль</label>
+            <input type='password' value="dsfsdf"/>
+          </div>
+          <div className='app-input small-input'>
+            <label>Кодовое слово</label>
+            <input value="почта"/>
+          </div>
         </div>
       </div>
 

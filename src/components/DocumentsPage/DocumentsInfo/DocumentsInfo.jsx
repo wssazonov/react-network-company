@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsInfoTable from './DocumentsInfoTable/DocumentsInfoTable';
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
+import DateTimePicker from '../../DateTimePicker/DateTimePicker';
 
 const mockInfo = [
   { date: new Date().toISOString(), user: 'Житкова Любава Евстигнеевна', deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
@@ -15,14 +16,14 @@ const mockInfo = [
 ];
 
 const mockInfo2 = [
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Отправлен' },
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
+  { date: new Date().toISOString(), deviceNumber: 340000102, document: 'Скан прибора учета', status: 'Не отправлен' },
 ];
 
 const dateFilterOptions = [
@@ -82,14 +83,7 @@ function DocumentsInfo() {
               options={ usersOptions }
             />
           </RoleBasedRender>
-          <Dropdown
-            defaultValue='1 января 2019 - 1 сентября 2019'
-            fluid
-            className="app-dropdown-button date-range-selector dropdown-margin"
-            selection
-            icon='angle down'
-            options={ dateFilterOptions }
-          />
+          <DateTimePicker />
           <Dropdown
             defaultValue='С любым статусом'
             fluid

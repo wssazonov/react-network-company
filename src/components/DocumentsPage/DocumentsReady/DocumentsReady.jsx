@@ -3,16 +3,17 @@ import { Dropdown } from 'semantic-ui-react';
 import DocumentsReadyTable from './DocumentsReadyTable/DocumentsReadyTable';
 import UploadMaketModal from "../../modals/UploadMaket/UploadMaketModal";
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
+import DateTimePicker from '../../DateTimePicker/DateTimePicker';
 
 const mockInfo = [
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Отправлен' },
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
-  { date: new Date().toISOString(), document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Не отправлен' },
+  { date: new Date().toISOString(), object: 'Объект 1', document: 'Макет Availability', status: 'Не отправлен' },
 ];
 
 const mockInfo2 = [
@@ -66,14 +67,7 @@ function DocumentsReady() {
     <div>
       <div className='flex-row space'>
         <div className='flex-row'>
-          <Dropdown
-            defaultValue='1 января 2019 - 1 сентября 2019'
-            fluid
-            className="app-dropdown-button date-range-selector dropdown-margin"
-            selection
-            icon='angle down'
-            options={ dateFilterOptions }
-          />
+          <DateTimePicker />
           <Dropdown
             defaultValue='С любым статусом'
             fluid

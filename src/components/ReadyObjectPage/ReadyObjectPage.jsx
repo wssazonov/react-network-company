@@ -5,6 +5,7 @@ import ReadyObjectTable from './ReadyObjectTable/ReadyObjectTable';
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 import SentReadyModal from "../modals/SentReady/SentReadyModal";
 import { Tab } from 'semantic-ui-react'
+import DateTimePicker from '../DateTimePicker/DateTimePicker';
 
 const panes = [
   {
@@ -60,14 +61,7 @@ function ReadyPage({ history, match }) {
         <Tab menu={{ secondary: true, pointing: true }} panes={panes}/>
       </RoleBasedRender>
       <div className='flex-row'>
-        <Dropdown
-          defaultValue='1 января 2019 - 1 сентября 2019'
-          fluid
-          className="app-dropdown-button date-range-selector dropdown-margin"
-          selection
-          icon='angle down'
-          options={ dateFilterOptions }
-        />
+        <DateTimePicker />
       </div>
       <RoleBasedRender requiredRoles={ ['Потребитель'] } >
         <div className="regular-text">Готовность за период</div>

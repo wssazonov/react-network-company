@@ -4,6 +4,7 @@ import {eventsData} from "../../MockData/EventsMockData";
 import {Dropdown} from "semantic-ui-react";
 import {useHistory} from "react-router";
 import '../Consumers/Consumers.scss';
+import DateTimePicker from '../DateTimePicker/DateTimePicker';
 
 
 const VIEW_OPTIONS = [
@@ -72,15 +73,7 @@ function EventsPage() {
           onChange={ handleViewOptionChange }
           options={ VIEW_OPTIONS }
         />
-        <Dropdown
-          defaultValue={dateFilterOptions[0].value}
-          fluid
-          icon='angle down'
-          className="app-dropdown-button date-range-selector dropdown-margin"
-          selection
-          onChange={ handleViewOptionChange }
-          options={ dateFilterOptions }
-        />
+        <DateTimePicker />
       </div>
       <table className="table events-table">
         <thead>

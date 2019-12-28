@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsConsumptionTable from './DocumentsConsumptionTable/DocumentsConsumptionTable';
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
+import DateTimePicker from '../../DateTimePicker/DateTimePicker';
 
 const mockInfo = [
   { date: new Date().toISOString(), object: 'Объект 1', user: 'Житкова Любава Евстигнеевна', document: 'Скан прибора учета', status: 'Не отправлен' },
@@ -98,14 +99,7 @@ function DocumentsConsumption() {
               options={ usersOptions }
             />
           </RoleBasedRender>
-          <Dropdown
-            defaultValue='1 января 2019 - 1 сентября 2019'
-            fluid
-            className="app-dropdown-button date-range-selector dropdown-margin"
-            selection
-            icon='angle down'
-            options={ dateFilterOptions }
-          />
+          <DateTimePicker />
           <Dropdown
             defaultValue='С любым статусом'
             fluid

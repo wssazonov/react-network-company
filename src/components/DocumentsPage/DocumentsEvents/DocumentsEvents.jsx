@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsEventsTable from './DocumentsEventsTable/DocumentsEventsTable';
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
-
+import DateTimePicker from '../../DateTimePicker/DateTimePicker';
 const mockInfo = [
   { date: new Date().toISOString(), user: 'Объект 1', document: '2019.11.13-dr-event.xml' },
   { date: new Date().toISOString(), user: 'Объект 1', document: '2019.11.12-dr-event.xml' },
@@ -53,24 +53,17 @@ function DocumentsEvents() {
               options={ usersOptions }
             />
           </RoleBasedRender>
-          <Dropdown
-            defaultValue='1 января 2019 - 1 сентября 2019'
-            fluid
-            className="app-dropdown-button date-range-selector dropdown-margin"
-            selection
-            icon='angle down'
-            options={ dateFilterOptions }
-          />
+          <DateTimePicker />
         </div>
       </div>
 
-      <RoleBasedRender requiredRoles={ ['Администратор'] } >
+      {/* <RoleBasedRender requiredRoles={ ['Администратор'] } > */}
         <DocumentsEventsTable 
           documents={ mockInfo } 
           onDelete={ handleDelete } 
           onRowClick={ handleRowClick } 
         />
-      </RoleBasedRender>
+      {/* </RoleBasedRender> */}
     </div>
   );
 }

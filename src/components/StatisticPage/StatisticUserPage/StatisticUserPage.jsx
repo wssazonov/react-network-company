@@ -3,6 +3,7 @@ import { Dropdown } from 'semantic-ui-react';
 import './StatisticUserPage.scss';
 import StatisticUserTable from './StatisticUserTable/StatisticUserTable';
 import DateTimePicker from '../../DateTimePicker/DateTimePicker';
+import PickChart from '../../pickChart/PickChart';
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
@@ -67,6 +68,10 @@ function StatisticUserPage({ history, match }) {
         <p>После скачивания вы сможете их подписать, <br /> а потом загрузить <span> в раздел Документы</span></p>
         <button className='primary-button flex-row'>Загрузить данные из файла</button>
       </div>
+      <div className="balance-value">6 октября</div>
+      <PickChart />
+      <div className="balance-value">7 октября</div>
+      <PickChart />
     </div>
   );
 }

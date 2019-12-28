@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import './ReadyPage.scss';
 import ReadyTable from './ReadyTable/ReadyTable';
+import DateTimePicker from '../DateTimePicker/DateTimePicker';
 // import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockInfo = [
@@ -9,19 +10,6 @@ const mockInfo = [
   { object: 'Объект 2', consumption: '20%' },
   { object: 'Объект 3', consumption: '30%' },
   { object: 'Объект 4', consumption: '40%' },
-];
-
-const dateFilterOptions = [
-  {
-    key: '1 января 2019 - 1 сентября 2019',
-    text: '1 января 2019 - 1 сентября 2019',
-    value: '1 января 2019 - 1 сентября 2019',
-  },
-  {
-    key: '1 сентября 2019 - 1 октября 2019',
-    text: '1 сентября 2019 - 1 октября 2019',
-    value: '1 сентября 2019 - 1 октября 2019',
-  },
 ];
 
 function ReadyPage({ history, match }) {
@@ -35,14 +23,7 @@ function ReadyPage({ history, match }) {
         <h1>Готовность <span>Агрегатор</span></h1>
       </div>
       <div className='flex-row'>
-        <Dropdown
-          defaultValue='1 января 2019 - 1 сентября 2019'
-          fluid
-          className="app-dropdown-button date-range-selector dropdown-margin"
-          selection
-          icon='angle down'
-          options={ dateFilterOptions }
-        />
+        <DateTimePicker />
       </div>
       <ReadyTable 
         objects={ mockInfo } 

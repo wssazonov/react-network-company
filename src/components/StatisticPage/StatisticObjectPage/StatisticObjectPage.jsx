@@ -58,6 +58,9 @@ function StatisticObjectPage({ history, match }) {
         <button className='primary-button' onClick={ handleSubmit }>Скачать макеты 80020</button>
         <p>После скачивания вы сможете их подписать, <br /> а потом загрузить <span> в раздел Документы</span></p>
       </div>
+      <div className="balance-value">6 октября</div>
+      <PickChart />
+      <div className="balance-value">7 октября</div>
       <PickChart />
       {/* <button className='secondary-button' onClick={ resetChanges }>Скачать отчёт о ПУ с нулевыми показателями</button> */}
     </div>

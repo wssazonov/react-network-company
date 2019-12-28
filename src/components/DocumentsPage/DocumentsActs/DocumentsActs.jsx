@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import DocumentsActsTable from './DocumentsActsTable/DocumentsActsTable';
-
+import DateTimePicker from '../../DateTimePicker/DateTimePicker';
 import UploadScantModal from "../../modals/UploadScan/UploadScanModal";
 import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
@@ -85,14 +85,7 @@ function DocumentsActs() {
               options={ usersOptions }
             />
           </RoleBasedRender>
-          <Dropdown
-            defaultValue='1 января 2019 - 1 сентября 2019'
-            fluid
-            className="app-dropdown-button date-range-selector dropdown-margin"
-            selection
-            icon='angle down'
-            options={ dateFilterOptions }
-          />
+          <DateTimePicker />
           <Dropdown
             defaultValue='С любым статусом'
             fluid

@@ -9,8 +9,10 @@
     .field {
       .ui {
         width: 300px !important;
+        margin-right: 15px;
         input {
           color: #1AA5B8;
+          height: 32px;
           border: 1px solid #1AA5B8 !important;
           border-radius: 4px !important;
           font-family: Ubuntu Mono;
