@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-network-company/static/css/main.c2325461.chunk.css",
-    "main.js": "/react-network-company/static/js/main.0dea73f4.chunk.js",
-    "main.js.map": "/react-network-company/static/js/main.0dea73f4.chunk.js.map",
+    "main.css": "/react-network-company/static/css/main.0635a2ca.chunk.css",
+    "main.js": "/react-network-company/static/js/main.74a119f7.chunk.js",
+    "main.js.map": "/react-network-company/static/js/main.74a119f7.chunk.js.map",
     "runtime-main.js": "/react-network-company/static/js/runtime-main.e4000666.js",
     "runtime-main.js.map": "/react-network-company/static/js/runtime-main.e4000666.js.map",
     "static/css/2.b481ab1d.chunk.css": "/react-network-company/static/css/2.b481ab1d.chunk.css",
-    "static/js/2.42cec7bd.chunk.js": "/react-network-company/static/js/2.42cec7bd.chunk.js",
-    "static/js/2.42cec7bd.chunk.js.map": "/react-network-company/static/js/2.42cec7bd.chunk.js.map",
+    "static/js/2.ea77c69c.chunk.js": "/react-network-company/static/js/2.ea77c69c.chunk.js",
+    "static/js/2.ea77c69c.chunk.js.map": "/react-network-company/static/js/2.ea77c69c.chunk.js.map",
     "index.html": "/react-network-company/index.html",
-    "precache-manifest.a31cbd8f682d1cedb5611c5f28425804.js": "/react-network-company/precache-manifest.a31cbd8f682d1cedb5611c5f28425804.js",
+    "precache-manifest.e1a9c8bea05061d94dd5f7b498ffcf6a.js": "/react-network-company/precache-manifest.e1a9c8bea05061d94dd5f7b498ffcf6a.js",
     "service-worker.js": "/react-network-company/service-worker.js",
     "static/css/2.b481ab1d.chunk.css.map": "/react-network-company/static/css/2.b481ab1d.chunk.css.map",
-    "static/css/main.c2325461.chunk.css.map": "/react-network-company/static/css/main.c2325461.chunk.css.map",
+    "static/css/main.0635a2ca.chunk.css.map": "/react-network-company/static/css/main.0635a2ca.chunk.css.map",
     "static/media/bell.svg": "/react-network-company/static/media/bell.69e6217a.svg",
     "static/media/logo.svg": "/react-network-company/static/media/logo.8ac90c27.svg",
     "static/media/unfold-icon.svg": "/react-network-company/static/media/unfold-icon.aa3be005.svg"
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.e4000666.js",
     "static/css/2.b481ab1d.chunk.css",
-    "static/js/2.42cec7bd.chunk.js",
-    "static/css/main.c2325461.chunk.css",
-    "static/js/main.0dea73f4.chunk.js"
+    "static/js/2.ea77c69c.chunk.js",
+    "static/css/main.0635a2ca.chunk.css",
+    "static/js/main.74a119f7.chunk.js"
   ]
 }
