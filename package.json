@@ -9,7 +9,7 @@
     "@material-ui/lab": "latest",
     "connected-react-router": "^6.5.2",
     "date-fns": "^2.7.0",
-    "highcharts": "^8.0.0",
+    "highcharts": "^9.0.0",
     "highcharts-react-official": "^2.2.2",
     "history": "^4.10.1",
     "node-sass": "^4.12.0",
